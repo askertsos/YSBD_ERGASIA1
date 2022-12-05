@@ -7,7 +7,7 @@
 #include "Logs.h"
 
 #define RECORDS_NUM 200 // you can change it if you want
-#define FILE_NAME "data.db"
+#define FILE_NAME "ht_1.db"
 
 #define CALL_OR_DIE(call)     \
   {                           \
@@ -25,7 +25,7 @@ int main() {
   FILE * logger = fopen("./Logs/Logs.txt","w");
   log_add_fp(logger,1);
 
-  log_info("Entering ht_main");
+  log_info("Entered ht_main");
 
   BF_Init(LRU);
 

@@ -4,6 +4,9 @@
 #include <record.h>
 #include <string.h>
 
+#define DB_ROOT "ht_databases/"
+char* get_full_path(char* file_name);
+
 
 typedef struct {
     // Να το συμπληρώσετε

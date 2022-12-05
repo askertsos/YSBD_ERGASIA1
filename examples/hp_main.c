@@ -7,7 +7,7 @@
 #include "Logs.h"
 
 #define RECORDS_NUM 1000 // you can change it if you want
-#define FILE_NAME "data.db"
+#define FILE_NAME "hp_1.db"
 
 #define CALL_OR_DIE(call)     \
   {                           \
