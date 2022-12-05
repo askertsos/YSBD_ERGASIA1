@@ -5,6 +5,7 @@
 #include "bf.h"
 #include "ht_table.h"
 #include "record.h"
+#include "Logs.h"
 
 #define CALL_OR_DIE(call)     \
   {                           \
@@ -17,26 +18,23 @@
 
 
 int HT_CreateFile(char *fileName,  int buckets){
-    return 0;
+  log_info("Creating file : %s",fileName);
+  CALL_OR_DIE(BF_CreateFile("block_example.db"))
+  return 0;
 }
 
 HT_info* HT_OpenFile(char *fileName){
-    return NULL;
+  return NULL;
 }
 
-
 int HT_CloseFile( HT_info* HT_info ){
-    return 0;
+  return 0;
 }
 
 int HT_InsertEntry(HT_info* ht_info, Record record){
-    return 0;
+  return 0;
 }
 
 int HT_GetAllEntries(HT_info* ht_info, void *value ){
-    return 0;
+  return 0;
 }
-
-
-
-

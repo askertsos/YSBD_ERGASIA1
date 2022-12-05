@@ -4,6 +4,7 @@
 #include <time.h>
 #include "bf.h"
 #include "hp_file.h"
+#include "Logs.h"
 
 #define RECORDS_NUM 1000 // you can change it if you want
 #define FILE_NAME "data.db"
@@ -18,6 +19,12 @@
   }
 
 int main() {
+
+  //Initialize logger
+  log_set_quiet(1);
+  FILE * logger = fopen("./Logs/Logs.txt","w");
+  log_add_fp(logger,1);
+
   BF_Init(LRU);
 
   HP_CreateFile(FILE_NAME);
