@@ -17,9 +17,16 @@
   }
 
 
+char* get_full_path(char* file_name){
+  char* full_path = malloc(strlen(DB_ROOT) + strlen(file_name) + 1);
+  strcpy(full_path,DB_ROOT);
+  strcat(full_path,file_name);
+  return full_path;
+}
+
 int HT_CreateFile(char *fileName,  int buckets){
-  log_info("Creating file : %s",fileName);
-  CALL_OR_DIE(BF_CreateFile("block_example.db"))
+  BF_CreateFile(get_full_path(fileName));
+  log_info("Created file %s",get_full_path(fileName));
   return 0;
 }
 

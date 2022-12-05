@@ -18,4 +18,4 @@ ht:
 
 clean:
 	@echo "Cleaning up..."
-	rm ./build/* *.db
+	rm ./build/* hp_databases/* ht_databases/*
