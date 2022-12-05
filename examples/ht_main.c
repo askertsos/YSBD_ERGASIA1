@@ -4,6 +4,7 @@
 #include <time.h>
 #include "bf.h"
 #include "ht_table.h"
+#include "Logs.h"
 
 #define RECORDS_NUM 200 // you can change it if you want
 #define FILE_NAME "data.db"
@@ -18,6 +19,14 @@
   }
 
 int main() {
+
+  //Initialize logger
+  log_set_quiet(1);
+  FILE * logger = fopen("./Logs/Logs.txt","w");
+  log_add_fp(logger,1);
+
+  log_info("Entering ht_main");
+
   BF_Init(LRU);
 
   HT_CreateFile(FILE_NAME,10);

@@ -1,0 +1,4 @@
+*.db
+Logs/Logs.txt
+build/*
+Notes.txt

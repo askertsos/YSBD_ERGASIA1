@@ -1,8 +1,8 @@
 #ifndef HT_TABLE_H
 #define HT_TABLE_H
+
 #include <record.h>
-
-
+#include <string.h>
 
 
 typedef struct {

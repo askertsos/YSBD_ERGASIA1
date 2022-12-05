@@ -5,6 +5,7 @@
 #include "bf.h"
 #include "hp_file.h"
 #include "record.h"
+#include "Logs.h"
 
 #define CALL_BF(call)       \
 {                           \
