@@ -29,7 +29,8 @@ int main() {
 
   BF_Init(LRU);
 
-  HT_CreateFile(FILE_NAME,10);
+  HT_CreateFile(get_name_of_next_db(),10);
+  HT_CreateFile(get_name_of_next_db(),10);
   HT_info* info = HT_OpenFile(FILE_NAME);
 
   Record record;

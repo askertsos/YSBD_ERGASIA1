@@ -4,8 +4,7 @@
 #include <record.h>
 #include <string.h>
 
-#define DB_ROOT "ht_databases/"
-char* get_full_path(char* file_name);
+char* get_name_of_next_db();
 
 
 typedef struct {
