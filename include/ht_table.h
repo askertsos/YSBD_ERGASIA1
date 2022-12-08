@@ -8,7 +8,8 @@ char* get_name_of_next_db();
 
 
 typedef struct {
-    // Να το συμπληρώσετε
+    int blocks;
+    int buckets;
 } HT_info;
 
 typedef struct {

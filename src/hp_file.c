@@ -16,7 +16,7 @@ int hp_created = 0;
 #define CALL_BF(call)       \
 {                           \
   BF_ErrorCode code = call; \
-  if (code != BF_OK) {         \
+  if (code != BF_OK) {      \
     BF_PrintError(code);    \
     return HP_ERROR;        \
   }                         \
@@ -38,7 +38,7 @@ char* get_name_of_next_db(){
 }
 
 int HP_CreateFile(char *fileName){
-  BF_CreateFile(fileName);
+  CALL_BF(BF_CreateFile(fileName));
   log_info("Created file %s",fileName);
   return 0;
 }
