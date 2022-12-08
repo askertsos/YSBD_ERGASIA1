@@ -2,8 +2,7 @@
 #define HP_FILE_H
 #include <record.h>
 
-#define DB_ROOT "hp_databases/"
-char* get_full_path(char* file_name);
+char* get_name_of_next_db();
 
 /* Η δομή HP_info κρατάει μεταδεδομένα που σχετίζονται με το αρχείο σωρού*/
 typedef struct {

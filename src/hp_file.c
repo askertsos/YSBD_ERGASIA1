@@ -7,6 +7,12 @@
 #include "record.h"
 #include "Logs.h"
 
+// Base name to create all hp_databases from
+#define DB_ROOT "hp_databases/hp_"
+// Store number of created databases
+int hp_created = 0;
+
+
 #define CALL_BF(call)       \
 {                           \
   BF_ErrorCode code = call; \
@@ -16,16 +22,24 @@
   }                         \
 }
 
-char* get_full_path(char* file_name){
-  char* full_path = malloc(strlen(DB_ROOT) + strlen(file_name) + 1);
-  strcpy(full_path,DB_ROOT);
-  strcat(full_path,file_name);
-  return full_path;
+char* get_name_of_next_db(){
+  // Each database will be named using DB_ROOT as a base
+  // and hp_created as their id and will be of .db type.
+
+  hp_created++;
+  log_info("Creating name for id : %d",hp_created);
+  char* id = malloc(hp_created/10);
+  sprintf(id,"%d",hp_created);
+  char* f_name = malloc(strlen(DB_ROOT) + strlen(id) + 4);
+  strcpy(f_name,DB_ROOT);
+  strcat(f_name,id);
+  strcat(f_name,".db");
+  return f_name;
 }
 
 int HP_CreateFile(char *fileName){
-  BF_CreateFile(get_full_path(fileName));
-  log_info("Created file %s",get_full_path(fileName));
+  BF_CreateFile(fileName);
+  log_info("Created file %s",fileName);
   return 0;
 }
 

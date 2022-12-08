@@ -25,9 +25,12 @@ int main() {
   FILE * logger = fopen("./Logs/Logs.txt","w");
   log_add_fp(logger,1);
 
+  log_info("Entered hp_main");
+  
   BF_Init(LRU);
 
-  HP_CreateFile(FILE_NAME);
+  HP_CreateFile(get_name_of_next_db());
+  HP_CreateFile(get_name_of_next_db());
   HP_info* info = HP_OpenFile(FILE_NAME);
 
   Record record;

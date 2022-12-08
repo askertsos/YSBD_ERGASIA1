@@ -7,6 +7,12 @@
 #include "record.h"
 #include "Logs.h"
 
+// Base name to create all ht_databases from
+#define DB_ROOT "ht_databases/ht_"
+// Store number of created databases
+int ht_created = 0;
+
+
 #define CALL_OR_DIE(call)     \
   {                           \
     BF_ErrorCode code = call; \
@@ -17,16 +23,24 @@
   }
 
 
-char* get_full_path(char* file_name){
-  char* full_path = malloc(strlen(DB_ROOT) + strlen(file_name) + 1);
-  strcpy(full_path,DB_ROOT);
-  strcat(full_path,file_name);
-  return full_path;
+char* get_name_of_next_db(){
+  // Each database will be named using DB_ROOT as a base
+  // and ht_created as their id and will be of .db type.
+
+  ht_created++;
+  log_info("Creating name for id : %d",ht_created);
+  char* id = malloc(ht_created/10);
+  sprintf(id,"%d",ht_created);
+  char* f_name = malloc(strlen(DB_ROOT) + strlen(id) + 4);
+  strcpy(f_name,DB_ROOT);
+  strcat(f_name,id);
+  strcat(f_name,".db");
+  return f_name;
 }
 
 int HT_CreateFile(char *fileName,  int buckets){
-  BF_CreateFile(get_full_path(fileName));
-  log_info("Created file %s",get_full_path(fileName));
+  BF_CreateFile(fileName);
+  log_info("Created file %s",fileName);
   return 0;
 }
 
