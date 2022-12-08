@@ -40,6 +40,31 @@ char* get_name_of_next_db(){
 int HP_CreateFile(char *fileName){
   CALL_BF(BF_CreateFile(fileName));
   log_info("Created file %s",fileName);
+
+  int fd;
+  BF_Block* block;
+  void* data;
+
+  CALL_OR_DIE(BF_Init(LRU));
+  CALL_OR_DIE(BF_CreateFile(fileName));
+  CALL_OR_DIE(BF_OpenFile(fileName,&fd));
+  BF_Block_Init(&block);
+
+  CALL_OR_DIE(BF_AllocateBlock(fd, block));
+  data = BF_Block_GetData(block);
+
+  HP_info info;
+  info.fileDesc = fd;
+  info.blocks = 1;
+
+  memcpy(data,&info,sizeof(info));
+
+  BF_Block_SetDirty(block);
+  CALL_OR_DIE(BF_UnpinBlock(block));
+
+  CALL_OR_DIE(BF_CloseFile(fd));
+  CALL_OR_DIE(BF_Close());
+
   return 0;
 }
 
