@@ -36,8 +36,8 @@ int main() {
   file1 = get_name_of_next_db();
   log_info("file1 is %s",file1);
   HP_CreateFile(file1);
+  HP_info* info = HP_OpenFile(file1);
   free(file1);
-  HP_info* info = HP_OpenFile(FILE_NAME);
 
 
   Record record;
@@ -56,4 +56,5 @@ int main() {
 
   HP_CloseFile(info);
   BF_Close();
+  fclose(logger);
 }
