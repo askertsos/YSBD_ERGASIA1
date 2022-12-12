@@ -16,6 +16,14 @@ ht:
 	@echo "Running ht_main..."
 	./build/ht_main
 
+hpv:
+	gcc -I ./include/ -L ./lib/ -Wl,-rpath,./lib/ ./examples/hp_main.c ./src/record.c ./src/hp_file.c ./Logs/Logs.c -lbf -o ./build/hp_main -O2
+	valgrind --leak-check=full --show-leak-kinds=all ./build/hp_main
+
+htv:
+	gcc -I ./include/ -L ./lib/ -Wl,-rpath,./lib/ ./examples/ht_main.c ./src/record.c ./src/ht_table.c ./Logs/Logs.c -lbf -o ./build/ht_main -O2
+	valgrind --leak-check=full 	./build/ht_main
+
 clean:
 	@echo "Cleaning up..."
-	rm ./build/* hp_databases/* ht_databases/*
+	rm /build/* hp_databases/* ht_databases/*

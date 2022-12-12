@@ -16,7 +16,7 @@ int hp_created = 0;
 #define CALL_BF(call)       \
 {                           \
   BF_ErrorCode code = call; \
-  if (code != BF_OK) {         \
+  if (code != BF_OK) {      \
     BF_PrintError(code);    \
     return BF_ERROR;        \
   }                         \
@@ -28,38 +28,43 @@ char* get_name_of_next_db(){
 
   hp_created++;
   log_info("Creating name for id : %d",hp_created);
-  char* id = malloc(hp_created/10);
+  // char* id = malloc(hp_created/10);
+  char id[100];
   sprintf(id,"%d",hp_created);
   char* f_name = malloc(strlen(DB_ROOT) + strlen(id) + 4);
   strcpy(f_name,DB_ROOT);
   strcat(f_name,id);
   strcat(f_name,".db");
+  // free(id);
   return f_name;
 }
 
 int HP_CreateFile(char *fileName){
-  int fd = 5;
+
+  log_info("Created file %s",fileName);
+
+  int fd;
   BF_Block* block;
   void* data;
 
-  printf("createfile %s\n",fileName);
+
   CALL_BF(BF_CreateFile(fileName));
-  printf("openfile\n");
-  CALL_BF(BF_OpenFile(fileName,&fd));
   BF_Block_Init(&block);
+  CALL_BF(BF_OpenFile(fileName,&fd));
+
+
 
   printf("allocateblock\n");
   CALL_BF(BF_AllocateBlock(fd, block));
-  printf("blocGetData\n");
+  printf("blockGetData\n");
   data = BF_Block_GetData(block);
   log_info("data = ");
 
-  HP_info info;
-  info.fileDesc = fd;
-  info.blocks = 1;
+  HP_info* info = data;
+  info->fileDesc = fd;
+  info->blocks = 1;
 
-  memcpy(data,&info,sizeof(info));
-  log_info("memcpy");
+  log_info("copied hp_info");
 
   BF_Block_SetDirty(block);
   log_info("setdirty");
@@ -76,6 +81,14 @@ int HP_CreateFile(char *fileName){
 
 HP_info* HP_OpenFile(char *fileName){
   log_info("in hp_openfile");
+  int fd;
+  BF_Block* block;
+  CALL_BF(BF_OpenFile(fileName,&fd));
+  BF_GetBlock(fd,0,block);
+
+  HP_info* info = (HP_info*) BF_Block_GetData(block);
+  return info;
+
   return NULL ;
 }
 
