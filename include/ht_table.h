@@ -8,6 +8,7 @@ char* get_name_of_next_db();
 
 
 typedef struct {
+    int fd;
     int blocks;
     int buckets;
 } HT_info;
