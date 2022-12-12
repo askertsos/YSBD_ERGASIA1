@@ -7,6 +7,8 @@ char* get_name_of_next_db();
 /* Η δομή HP_info κρατάει μεταδεδομένα που σχετίζονται με το αρχείο σωρού*/
 typedef struct {
     // Να το συμπληρώσετε
+    int fileDesc;
+    int blocks;
 } HP_info;
 
 /*Η συνάρτηση HP_CreateFile χρησιμοποιείται για τη δημιουργία και

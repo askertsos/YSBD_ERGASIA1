@@ -7,7 +7,7 @@
 #include "Logs.h"
 
 #define RECORDS_NUM 200 // you can change it if you want
-#define FILE_NAME "ht_1.db"
+#define FILE_NAME "ht_databases/ht_1.db"
 
 #define CALL_OR_DIE(call)     \
   {                           \
@@ -29,7 +29,6 @@ int main() {
 
   BF_Init(LRU);
 
-  HT_CreateFile(get_name_of_next_db(),10);
   HT_CreateFile(get_name_of_next_db(),10);
   HT_info* info = HT_OpenFile(FILE_NAME);
 
