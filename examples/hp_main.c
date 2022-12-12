@@ -29,9 +29,17 @@ int main() {
   
   BF_Init(LRU);
 
-  HP_CreateFile(get_name_of_next_db());
-  HP_CreateFile(get_name_of_next_db());
+  char* file1 = get_name_of_next_db();
+  log_info("file1 is %s",file1);
+  HP_CreateFile(file1);
+  free(file1);
+  file1 = get_name_of_next_db();
+  log_info("file1 is %s",file1);
+  HP_CreateFile(file1);
+  free(file1);
   HP_info* info = HP_OpenFile(FILE_NAME);
+  log_info("after openfile");
+
 
   Record record;
   srand(12569874);

@@ -18,7 +18,7 @@ int hp_created = 0;
   BF_ErrorCode code = call; \
   if (code != BF_OK) {      \
     BF_PrintError(code);    \
-    return HP_ERROR;        \
+    return BF_ERROR;        \
   }                         \
 }
 
@@ -28,47 +28,67 @@ char* get_name_of_next_db(){
 
   hp_created++;
   log_info("Creating name for id : %d",hp_created);
-  char* id = malloc(hp_created/10);
+  // char* id = malloc(hp_created/10);
+  char id[100];
   sprintf(id,"%d",hp_created);
   char* f_name = malloc(strlen(DB_ROOT) + strlen(id) + 4);
   strcpy(f_name,DB_ROOT);
   strcat(f_name,id);
   strcat(f_name,".db");
+  // free(id);
   return f_name;
 }
 
 int HP_CreateFile(char *fileName){
-  CALL_BF(BF_CreateFile(fileName));
+
   log_info("Created file %s",fileName);
 
   int fd;
   BF_Block* block;
   void* data;
 
-  CALL_OR_DIE(BF_Init(LRU));
-  CALL_OR_DIE(BF_CreateFile(fileName));
-  CALL_OR_DIE(BF_OpenFile(fileName,&fd));
+
+  CALL_BF(BF_CreateFile(fileName));
   BF_Block_Init(&block);
+  CALL_BF(BF_OpenFile(fileName,&fd));
 
-  CALL_OR_DIE(BF_AllocateBlock(fd, block));
+
+
+  printf("allocateblock\n");
+  CALL_BF(BF_AllocateBlock(fd, block));
+  printf("blockGetData\n");
   data = BF_Block_GetData(block);
+  log_info("data = ");
 
-  HP_info info;
-  info.fileDesc = fd;
-  info.blocks = 1;
+  HP_info* info = data;
+  info->fileDesc = -1;
+  info->blocks = 1;
 
-  memcpy(data,&info,sizeof(info));
+  log_info("copied hp_info");
 
   BF_Block_SetDirty(block);
-  CALL_OR_DIE(BF_UnpinBlock(block));
+  log_info("setdirty");
+  CALL_BF(BF_UnpinBlock(block));
+  log_info("unpin");
 
-  CALL_OR_DIE(BF_CloseFile(fd));
-  CALL_OR_DIE(BF_Close());
+  CALL_BF(BF_CloseFile(fd));
+  log_info("bf_closefile");
+  CALL_BF(BF_Close());
+  log_info("bf_close");
 
   return 0;
 }
 
 HP_info* HP_OpenFile(char *fileName){
+  log_info("in hp_openfile");
+  int fd;
+  BF_Block* block;
+  CALL_BF(BF_OpenFile(fileName,&fd));
+  BF_GetBlock(fd,0,block);
+
+  HP_info* info = (HP_info*) BF_Block_GetData(block);
+  return info;
+
   return NULL ;
 }
 
