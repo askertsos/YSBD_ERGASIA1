@@ -61,7 +61,7 @@ int HP_CreateFile(char *fileName){
   log_info("data = ");
 
   HP_info* info = data;
-  info->fileDesc = fd;
+  info->fileDesc = -1;
   info->blocks = 1;
 
   log_info("copied hp_info");

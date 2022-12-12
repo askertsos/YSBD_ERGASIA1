@@ -4,11 +4,11 @@
 #include <record.h>
 #include <string.h>
 
-char* get_name_of_next_db();
-
-
 typedef struct {
-    // Να το συμπληρώσετε
+    int fd;
+    int blocks_num;
+    int buckets;
+    int type; //ht_files are type 2
 } HT_info;
 
 typedef struct {
