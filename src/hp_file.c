@@ -35,7 +35,6 @@ char* get_name_of_next_db(){
   strcpy(f_name,DB_ROOT);
   strcat(f_name,id);
   strcat(f_name,".db");
-  // free(id);
   return f_name;
 }
 
@@ -52,19 +51,32 @@ int HP_CreateFile(char *fileName){
   BF_Block_Init(&block);
   CALL_BF(BF_OpenFile(fileName,&fd));
 
+  log_info("initiated block with address %p",block);
+  
 
 
-  printf("allocateblock\n");
+
   CALL_BF(BF_AllocateBlock(fd, block));
-  printf("blockGetData\n");
+  log_info("block with address %p successfully allocated",block);
   data = BF_Block_GetData(block);
-  log_info("data = ");
+  log_info("data = %p",data);
 
-  HP_info* info = data;
-  info->fileDesc = fd;
-  info->blocks = 1;
+  HP_info* hp_info = data;
+  hp_info->fileDesc = fd;
+  hp_info->blocks = 1;
+  hp_info->type = HEAP;
 
   log_info("copied hp_info");
+
+  // /*Εισαγωγή στα τελευταία (sizeof(HP_Block_info)) bytes του block*/
+  // void* start = data + BF_BUFFER_SIZE;
+  // start = data - sizeof(HP_Block_info);
+
+  // HP_Block_info* hp_block_info = start;
+  // hp_block_info->records = 0;
+  // hp_block_info->nextBlock = NULL;
+  // log_info("copied hp_block_info");
+
 
   BF_Block_SetDirty(block);
   log_info("setdirty");
@@ -73,8 +85,7 @@ int HP_CreateFile(char *fileName){
 
   CALL_BF(BF_CloseFile(fd));
   log_info("bf_closefile");
-  CALL_BF(BF_Close());
-  log_info("bf_close");
+
 
   return 0;
 }
@@ -83,17 +94,43 @@ HP_info* HP_OpenFile(char *fileName){
   log_info("in hp_openfile");
   int fd;
   BF_Block* block;
-  CALL_BF(BF_OpenFile(fileName,&fd));
+  BF_OpenFile(fileName,&fd);
   BF_GetBlock(fd,0,block);
+  log_info("block is");
+  log_info("block is %p",block);
 
-  HP_info* info = (HP_info*) BF_Block_GetData(block);
+  // char* bytes = BF_Block_GetData(block);
+  // char* fd = strncpy(fd,bytes,sizeof(int));
+  // int fileDesc = atoi(fd);
+  // char* blocks = strncpy(blocks,bytes+sizeof(int),sizeof(int));
+  // int blocks = atoi(blocks);
+  // char* type = strncpy(type,bytes+2*(sizeof(int)),sizeof(int));
+  // int type = atoi(type);
+  
+  void* voidptr = BF_Block_GetData(block);
+  HP_info* info = voidptr;
+  info->fileDesc = fd;
+  log_info("info is %p",info);
+  BF_UnpinBlock(block);
+  if (info->type != HEAP)
+    return NULL;
   return info;
 
-  return NULL ;
 }
 
 
-int HP_CloseFile( HP_info* hp_info ){
+int HP_CloseFile(HP_info* hp_info ){
+  BF_Block* block;
+  int firstBlock = 0;
+  printf("doing fd\n");
+  int fd = hp_info->fileDesc;
+  printf("fd = %d\n",fd);
+  CALL_BF(BF_CloseFile(fd));
+  printf("bf closefile\n");
+  CALL_BF(BF_GetBlock(fd,firstBlock,block));
+  BF_Block_Destroy(&block);
+  free(hp_info);
+
   return 0;
 }
 

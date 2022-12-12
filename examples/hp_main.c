@@ -38,7 +38,6 @@ int main() {
   HP_CreateFile(file1);
   free(file1);
   HP_info* info = HP_OpenFile(FILE_NAME);
-  log_info("after openfile");
 
 
   Record record;
@@ -52,7 +51,7 @@ int main() {
 
   printf("RUN PrintAllEntries\n");
   int id = rand() % RECORDS_NUM;
-  printf("\nSearching for: %d",id);
+  printf("\nSearching for: %d\n",id);
   HP_GetAllEntries(info, id);
 
   HP_CloseFile(info);
