@@ -7,6 +7,8 @@
 #include "Logs.h"
 
 #define RECORDS_NUM 200 // you can change it if you want
+#define FILE_NAME "ht_1.db"
+
 #define CALL_OR_DIE(call)     \
   {                           \
     BF_ErrorCode code = call; \
@@ -77,9 +79,9 @@ int main() {
   //   HT_InsertEntry(info, record);
   // }
 
-  // printf("RUN PrintAllEntries\n");
-  // int id = rand() % RECORDS_NUM;
-  // HT_GetAllEntries(info, &id);
+  printf("RUN PrintAllEntries\n");
+  int id = rand() % RECORDS_NUM;
+  HT_GetAllEntries(info, &id);
 
   for(int i=0;i<200;i++) free(created_files[i]);
   fclose(logger);

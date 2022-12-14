@@ -57,6 +57,7 @@ int main() {
 
   BF_Init(LRU);
 
+<<<<<<< HEAD
   create_file();
   create_file();
   create_file();
@@ -76,8 +77,35 @@ int main() {
   // printf("RUN PrintAllEntries\n");
   // int id = rand() % RECORDS_NUM;
   // hp_GetAllEntries(info, &id);
+=======
+  char* file1 = get_name_of_next_db();
+  log_info("file1 is %s",file1);
+  HP_CreateFile(file1);
+  free(file1);
+  file1 = get_name_of_next_db();
+  log_info("file1 is %s",file1);
+  HP_CreateFile(file1);
+  HP_info* info = HP_OpenFile(file1);
+  free(file1);
+
+
+  Record record;
+  srand(12569874);
+  int r;
+  printf("Insert Entries\n");
+  for (int id = 0; id < RECORDS_NUM; ++id) {
+    record = randomRecord();
+    HP_InsertEntry(info, record);
+  }
+
+  printf("RUN PrintAllEntries\n");
+  int id = rand() % RECORDS_NUM;
+  printf("\nSearching for: %d\n",id);
+  HP_GetAllEntries(info, id);
+>>>>>>> 986472730e591e1dddc9c120cc480ff548057f26
 
   for(int i=0;i<200;i++) free(created_files[i]);
   fclose(logger);
   BF_Close();
+  fclose(logger);
 }

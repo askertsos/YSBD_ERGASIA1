@@ -7,9 +7,11 @@
 #include "record.h"
 #include "Logs.h"
 
+// Base name to create all ht_databases from
+#define DB_ROOT "ht_databases/ht_"
+// Store number of created databases
+int ht_created = 0;
 
-HT_info* open_ht_files[BF_MAX_OPEN_FILES];
-int      open_ht_files_counter = 0;
 
 #define CALL_OR_DIE(call)     \
   {                           \
@@ -19,6 +21,23 @@ int      open_ht_files_counter = 0;
       exit(code);             \
     }                         \
   }
+
+
+char* get_name_of_next_db(){
+  // Each database will be named using DB_ROOT as a base
+  // and ht_created as their id and will be of .db type.
+
+  ht_created++;
+  log_info("Creating name for id : %d",ht_created);
+  char* id = malloc(ht_created/10);
+  sprintf(id,"%d",ht_created);
+  char* f_name = malloc(strlen(DB_ROOT) + strlen(id) + 4);
+  strcpy(f_name,DB_ROOT);
+  strcat(f_name,id);
+  strcat(f_name,".db");
+  log_info("Name created succesfuly");
+  return f_name;
+}
 
 int HT_CreateFile(char *fileName,  int buckets){
   CALL_OR_DIE(BF_CreateFile(fileName));
@@ -45,11 +64,6 @@ int HT_CreateFile(char *fileName,  int buckets){
 }
 
 HT_info* HT_OpenFile(char *fileName){
-
-  if(open_ht_files_counter > 100){
-    log_info("Failed to open file %s : Maximum amount of open BF files has been reached.",fileName);
-    return NULL;
-  }
 
   int fd;
   CALL_OR_DIE(BF_OpenFile(fileName, &fd));

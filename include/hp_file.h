@@ -4,12 +4,25 @@
 
 char* get_name_of_next_db();
 
+typedef enum fileType{
+    HEAP = 0, HASH = 1
+} fileType;
+
 /* Η δομή HP_info κρατάει μεταδεδομένα που σχετίζονται με το αρχείο σωρού*/
 typedef struct {
     // Να το συμπληρώσετε
     int fileDesc;
     int blocks;
+    int type;
 } HP_info;
+
+typedef struct {
+    int records;
+    BF_Block* nextBlock;
+
+} HP_Block_info;
+
+#define RECORDS_PER_BLOCK (BF_BUFFER_SIZE - sizeof(HP_Block_info))/sizeof(Record)
 
 /*Η συνάρτηση HP_CreateFile χρησιμοποιείται για τη δημιουργία και
 κατάλληλη αρχικοποίηση ενός άδειου αρχείου σωρού με όνομα fileName.
