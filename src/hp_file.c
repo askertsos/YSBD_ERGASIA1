@@ -40,60 +40,72 @@ char* get_name_of_next_db(){
 }
 
 int HP_CreateFile(char *fileName){
-
-  log_info("Created file %s",fileName);
+  log_info("Creating file : %s",fileName);
+  CALL_OR_DIE(BF_CreateFile(fileName));
 
   int fd;
-  BF_Block* block;
   void* data;
-
-
-  CALL_BF(BF_CreateFile(fileName));
+  BF_Block* block;
   BF_Block_Init(&block);
-  CALL_BF(BF_OpenFile(fileName,&fd));
 
-
-
-  printf("allocateblock\n");
-  CALL_BF(BF_AllocateBlock(fd, block));
-  printf("blockGetData\n");
+  CALL_OR_DIE(BF_OpenFile(fileName, &fd));
+  CALL_OR_DIE(BF_AllocateBlock(fd, block));
   data = BF_Block_GetData(block);
-  log_info("data = ");
-
-  HP_info* info = data;
-  info->fileDesc = -1;
-  info->blocks = 1;
-
-  log_info("copied hp_info");
-
+  HP_info* file_info = data;
+  file_info->blocks_num  = 1;
+  file_info->fd = -1;
+  file_info->type = 1;
   BF_Block_SetDirty(block);
-  log_info("setdirty");
-  CALL_BF(BF_UnpinBlock(block));
-  log_info("unpin");
-
-  CALL_BF(BF_CloseFile(fd));
-  log_info("bf_closefile");
-  CALL_BF(BF_Close());
-  log_info("bf_close");
+  CALL_OR_DIE(BF_UnpinBlock(block));
+  CALL_OR_DIE(BF_CloseFile(fd));
 
   return 0;
 }
 
 HP_info* HP_OpenFile(char *fileName){
-  log_info("in hp_openfile");
+
+  if(open_hp_files_counter > 100){
+    log_info("Failed to open file %s : Maximum amount of open BF files has been reached.",fileName);
+    return NULL;
+  }
+
   int fd;
+  CALL_OR_DIE(BF_OpenFile(fileName, &fd));
+  log_info("Opened file %s",fileName);
+
   BF_Block* block;
-  CALL_BF(BF_OpenFile(fileName,&fd));
-  BF_GetBlock(fd,0,block);
+  BF_Block_Init(&block);
+  int block_num;
+  BF_GetBlockCounter(fd,&block_num);
+  BF_GetBlock(fd,block_num-1,block);
 
-  HP_info* info = (HP_info*) BF_Block_GetData(block);
-  return info;
+  void* data;
+  data = BF_Block_GetData(block);
+  hp_info* file_info = data;
+  file_info->fd = fd;
 
-  return NULL ;
+  //If file is not hp return NULL
+  if(file_info->type != 0){
+    free(file_info);
+    CALL_OR_DIE(BF_CloseFile(fd));
+    return NULL;
+  }
+  CALL_OR_DIE(BF_UnpinBlock(block));
+  log_info("File info %s : {fd = %d | blocknum = %d}",fileName,file_info->fd,file_info->blocks_num);
+
+  open_hp_files[open_hp_files_counter++] = file_info;
+
+  return file_info;
 }
 
 
-int HP_CloseFile( HP_info* hp_info ){
+int HP_CloseFile( HP_info* HP_info ){
+  log_info("Closing file with fd %d",hp_info->fd);
+  for(int i=0;i<open_hp_files_counter;i++){
+    if( open_hp_files[i]->fd == hp_info->fd )
+      BF_CloseFile(hp_info->fd);
+      open_hp_files_counter--;
+  }
   return 0;
 }
 
