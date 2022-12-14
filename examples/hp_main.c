@@ -6,7 +6,7 @@
 #include "hp_file.h"
 #include "Logs.h"
 
-#define RECORDS_NUM 1000 // you can change it if you want
+#define RECORDS_NUM 5 // you can change it if you want
 #define FILE_NAME "hp_1.db"
 
 #define CALL_OR_DIE(call)     \
@@ -29,15 +29,15 @@ int main() {
   
   BF_Init(LRU);
 
-  char* file1 = get_name_of_next_db();
-  log_info("file1 is %s",file1);
-  HP_CreateFile(file1);
-  free(file1);
-  file1 = get_name_of_next_db();
-  log_info("file1 is %s",file1);
-  HP_CreateFile(file1);
-  HP_info* info = HP_OpenFile(file1);
-  free(file1);
+  char* filename = get_name_of_next_db();
+  log_info("filename is %s",filename);
+  HP_CreateFile(filename);
+  free(filename);
+  filename = get_name_of_next_db();
+  log_info("filename is %s",filename);
+  HP_CreateFile(filename);
+  HP_info* info = HP_OpenFile(filename);
+  free(filename);
 
 
   Record record;
