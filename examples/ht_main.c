@@ -7,8 +7,7 @@
 #include "Logs.h"
 
 #define RECORDS_NUM 200 // you can change it if you want
-#define FILE_NAME "ht_1.db"
-
+#define MAX_CREATED_FILES 200
 #define CALL_OR_DIE(call)     \
   {                           \
     BF_ErrorCode code = call; \
@@ -22,8 +21,8 @@
 #define DB_ROOT "ht_databases/ht_"
 // Store number of created databases
 int ht_created = 0;
-char* created_files[200];
-HT_info* created_info[200];
+char* created_files[MAX_CREATED_FILES];
+HT_info* created_info[MAX_CREATED_FILES];
 
 char* generate_name(){
   // Each database will be named using DB_ROOT as a base
@@ -61,14 +60,11 @@ int main() {
   create_file();
   create_file();
 
-  for(int i=0;i<ht_created;i++){
-    created_info[i] = HT_OpenFile(created_files[i]);
-    log_info("Main added to created_files file with info : {fd = %d | blocknum = %d | buckets = %d | type = %d}",created_info[i]->fd,created_info[i]->blocks_num,created_info[i]->buckets,created_info[i]->type);
-  }
-  for(int i=0;i<ht_created;i++){
-    HT_CloseFile(created_info[i]);\
-    log_info("Main closing file with info : {fd = %d | blocknum = %d | buckets = %d | type = %d}",created_info[i]->fd,created_info[i]->blocks_num,created_info[i]->buckets,created_info[i]->type);
-  }
+  for(int i=0;i<ht_created;i++) created_info[i] = HT_OpenFile(created_files[i]);
+  HT_CloseFile(created_info[1]);
+  create_file();
+  created_info[3] = HT_OpenFile(created_files[3]);
+  created_info[1] = HT_OpenFile(created_files[1]);
 
   // Record record;
   // srand(12569874);
@@ -83,7 +79,7 @@ int main() {
   // int id = rand() % RECORDS_NUM;
   // HT_GetAllEntries(info, &id);
 
-  for(int i=0;i<200;i++) free(created_files[i]);
+  for(int i=0;i<MAX_CREATED_FILES;i++) free(created_files[i]);
   fclose(logger);
   BF_Close();
 }
