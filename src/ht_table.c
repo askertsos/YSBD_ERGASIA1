@@ -7,9 +7,12 @@
 #include "record.h"
 #include "Logs.h"
 
+// Base name to create all ht_databases from
+#define DB_ROOT "ht_databases/ht_"
+// Store number of created databases
+int open_ht_files_counter = 0;
+HT_info* open_ht_files[100];
 
-HT_info* open_ht_files[BF_MAX_OPEN_FILES];
-int      open_ht_files_counter = 0;
 
 #define CALL_OR_DIE(call)     \
   {                           \
@@ -20,8 +23,8 @@ int      open_ht_files_counter = 0;
     }                         \
   }
 
+
 int HT_CreateFile(char *fileName,  int buckets){
-  log_info("Creating file : %s",fileName);
   CALL_OR_DIE(BF_CreateFile(fileName));
 
   int fd;
@@ -36,7 +39,8 @@ int HT_CreateFile(char *fileName,  int buckets){
   file_info->buckets = buckets;
   file_info->blocks_num  = 1;
   file_info->fd = -1;
-  file_info->type = 2;
+  file_info->type = 1;
+  log_info("Created %s with info : {fd = %d | blocknum = %d | buckets = %d | type = %d}",fileName,file_info->fd,file_info->blocks_num,file_info->buckets,file_info->type);
   BF_Block_SetDirty(block);
   CALL_OR_DIE(BF_UnpinBlock(block));
   CALL_OR_DIE(BF_CloseFile(fd));
@@ -46,14 +50,8 @@ int HT_CreateFile(char *fileName,  int buckets){
 
 HT_info* HT_OpenFile(char *fileName){
 
-  if(open_ht_files_counter > 100){
-    log_info("Failed to open file %s : Maximum amount of open BF files has been reached.",fileName);
-    return NULL;
-  }
-
   int fd;
   CALL_OR_DIE(BF_OpenFile(fileName, &fd));
-  log_info("Opened file %s",fileName);
 
   BF_Block* block;
   BF_Block_Init(&block);
@@ -63,17 +61,21 @@ HT_info* HT_OpenFile(char *fileName){
 
   void* data;
   data = BF_Block_GetData(block);
-  HT_info* file_info = data;
-  file_info->fd = fd;
+  HT_info* temp = data;
 
   //If file is not ht return NULL
-  if(file_info->type != 2){
-    free(file_info);
+  if(temp->type != 1){
     CALL_OR_DIE(BF_CloseFile(fd));
     return NULL;
   }
+  HT_info* file_info = malloc(sizeof(HT_info));
+  file_info->fd = fd;
+  file_info->type = temp->type;
+  file_info->blocks_num = temp->blocks_num;
+  file_info->buckets = temp->buckets;
+
   CALL_OR_DIE(BF_UnpinBlock(block));
-  log_info("File info %s : {fd = %d | blocknum = %d | buckets = %d}",fileName,file_info->fd,file_info->blocks_num,file_info->buckets);
+  log_info("Opened file %s with info : {fd = %d | blocknum = %d | buckets = %d | type = %d}",fileName,file_info->fd,file_info->blocks_num,file_info->buckets,file_info->type);
 
   open_ht_files[open_ht_files_counter++] = file_info;
 
@@ -81,7 +83,7 @@ HT_info* HT_OpenFile(char *fileName){
 }
 
 int HT_CloseFile( HT_info* HT_info ){
-  log_info("Closing file with fd %d",HT_info->fd);
+  log_info("Closing file with info: {fd = %d | blocknum = %d | buckets = %d | type = %d}",HT_info->fd,HT_info->blocks_num,HT_info->buckets,HT_info->type);
   for(int i=0;i<open_ht_files_counter;i++){
     if( open_ht_files[i]->fd == HT_info->fd )
       BF_CloseFile(HT_info->fd);

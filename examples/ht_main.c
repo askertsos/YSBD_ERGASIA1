@@ -7,6 +7,8 @@
 #include "Logs.h"
 
 #define RECORDS_NUM 200 // you can change it if you want
+#define FILE_NAME "ht_1.db"
+
 #define CALL_OR_DIE(call)     \
   {                           \
     BF_ErrorCode code = call; \
@@ -28,14 +30,12 @@ char* generate_name(){
   // and ht_created as their id and will be of .db type.
 
   ht_created++;
-  log_info("Creating name for id : %d",ht_created);
   char* id = malloc(ht_created/10);
   sprintf(id,"%d",ht_created);
   char* f_name = malloc(strlen(DB_ROOT) + strlen(id) + 4);
   strcpy(f_name,DB_ROOT);
   strcat(f_name,id);
   strcat(f_name,".db");
-  log_info("Name created succesfuly");
   return f_name;
 }
 
@@ -61,8 +61,14 @@ int main() {
   create_file();
   create_file();
 
-  for(int i=0;i<ht_created;i++) created_info[i] = HT_OpenFile(created_files[i]);
-  for(int i=0;i<ht_created;i++) HT_CloseFile(created_info[i]);
+  for(int i=0;i<ht_created;i++){
+    created_info[i] = HT_OpenFile(created_files[i]);
+    log_info("Main added to created_files file with info : {fd = %d | blocknum = %d | buckets = %d | type = %d}",created_info[i]->fd,created_info[i]->blocks_num,created_info[i]->buckets,created_info[i]->type);
+  }
+  for(int i=0;i<ht_created;i++){
+    HT_CloseFile(created_info[i]);\
+    log_info("Main closing file with info : {fd = %d | blocknum = %d | buckets = %d | type = %d}",created_info[i]->fd,created_info[i]->blocks_num,created_info[i]->buckets,created_info[i]->type);
+  }
 
   // Record record;
   // srand(12569874);
@@ -78,5 +84,6 @@ int main() {
   // HT_GetAllEntries(info, &id);
 
   for(int i=0;i<200;i++) free(created_files[i]);
+  fclose(logger);
   BF_Close();
 }

@@ -12,7 +12,7 @@ typedef struct {
 } HT_info;
 
 typedef struct {
-    // Να το συμπληρώσετε
+  int records_num;
 } HT_block_info;
 
 /*Η συνάρτηση HT_CreateFile χρησιμοποιείται για τη δημιουργία

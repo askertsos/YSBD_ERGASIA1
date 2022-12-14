@@ -22,7 +22,7 @@ hpv:
 
 htv:
 	gcc -I ./include/ -L ./lib/ -Wl,-rpath,./lib/ ./examples/ht_main.c ./src/record.c ./src/ht_table.c ./Logs/Logs.c -lbf -o ./build/ht_main -O2
-	valgrind --leak-check=full 	./build/ht_main
+	valgrind --leak-check=full --track-origins=yes 	./build/ht_main
 
 clean:
 	@echo "Cleaning up..."
