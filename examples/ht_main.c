@@ -79,9 +79,9 @@ int main() {
   //   HT_InsertEntry(info, record);
   // }
 
-  printf("RUN PrintAllEntries\n");
-  int id = rand() % RECORDS_NUM;
-  HT_GetAllEntries(info, &id);
+  // printf("RUN PrintAllEntries\n");
+  // int id = rand() % RECORDS_NUM;
+  // HT_GetAllEntries(info, &id);
 
   for(int i=0;i<200;i++) free(created_files[i]);
   fclose(logger);
