@@ -13,6 +13,7 @@ typedef struct {
 
 typedef struct {
   int records_num;
+  int next_bucket;
 } HT_block_info;
 
 /*Η συνάρτηση HT_CreateFile χρησιμοποιείται για τη δημιουργία

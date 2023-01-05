@@ -47,11 +47,13 @@ int HT_CreateFile(char *fileName,  int buckets){
 
   // Allocate initial blocks for buckets
   for(int i=1; i <= buckets; i++){
+
     CALL_OR_DIE(BF_AllocateBlock(fd, block));
     data = BF_Block_GetData(block);
     memcpy(data,"-",BF_BLOCK_SIZE);
     HT_block_info* block_info = data;
     block_info->records_num = 0;
+    block_info->next_bucket = -1;
     BF_Block_SetDirty(block);
     CALL_OR_DIE(BF_UnpinBlock(block));
 
@@ -148,12 +150,24 @@ int HT_InsertEntry(HT_info* ht_info, Record record){
   }
   else{
 
-    
+    BF_Block* new_block;
+    BF_Block_Init(&new_block);
+    CALL_OR_DIE(BF_AllocateBlock(fd, new_block));
+    void* new_data = BF_Block_GetData(new_block);
+    memcpy(new_data,"-",BF_BLOCK_SIZE);
+    HT_block_info* new_block_info = new_data;
+    new_block_info->records_num = 1;
+    new_block_info->next_bucket = -1;
+    void* starting_bucket_position = new_data + sizeof(Record) + sizeof(HT_block_info);
+    memcpy(starting_bucket_position,&record,sizeof(Record));
+    BF_Block_SetDirty(new_block);
+    CALL_OR_DIE(BF_UnpinBlock(new_block));
+    BF_Block_Destroy(&new_block);
 
   }
   BF_Block_SetDirty(block);
-  // CALL_OR_DIE(BF_UnpinBlock(block));
-  // BF_Block_Destroy(&block);
+  CALL_OR_DIE(BF_UnpinBlock(block));
+  BF_Block_Destroy(&block);
 
   return 0;
 }
