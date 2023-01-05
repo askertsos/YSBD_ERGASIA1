@@ -7,7 +7,6 @@
 typedef struct {
     int fd;
     int position_in_open_files;
-    int blocks_num;
     int buckets;
     int type; //ht_files are type 1
 } HT_info;
