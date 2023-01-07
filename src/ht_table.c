@@ -131,6 +131,7 @@ int HT_InsertEntry(HT_info* ht_info, Record record){
   int bucket_num = ht_info->buckets;
   int hash_id = record.id % (bucket_num) + 1;
   int fd = ht_info->fd;
+  int bucket_inserted = -1;
 
   BF_Block* block;
   BF_Block_Init(&block);
@@ -150,6 +151,7 @@ int HT_InsertEntry(HT_info* ht_info, Record record){
   void* starting_bucket_position = data + block_info->records_num * sizeof(Record) + sizeof(HT_block_info);
   memcpy(starting_bucket_position,&record,sizeof(Record));
   block_info->records_num += 1;
+  bucket_inserted = block_info->bucket_id;
   log_info("Inserted record : { %d, %s, %s, %s} at bucket %d", record.id, record.name, record.surname, record.city,block_info->bucket_id);
   BF_Block_SetDirty(block);
   CALL_OR_DIE(BF_UnpinBlock(block));
@@ -173,8 +175,7 @@ int HT_InsertEntry(HT_info* ht_info, Record record){
     BF_Block_Destroy(&new_block);
   }
 
-
-  return 0;
+  return bucket_inserted;
 }
 
 int HT_GetAllEntries(HT_info* ht_info, void *value ){
@@ -222,5 +223,5 @@ int HT_GetAllEntries(HT_info* ht_info, void *value ){
 
   BF_Block_Destroy(&block);
 
-  return 0;
+  return buckets_read;
 }
