@@ -66,18 +66,16 @@ int main() {
   created_info[3] = HT_OpenFile(created_files[3]);
   created_info[1] = HT_OpenFile(created_files[1]);
 
-  // Record record;
-  // srand(12569874);
-  // int r;
-  // printf("Insert Entries\n");
-  // for (int id = 0; id < RECORDS_NUM; ++id) {
-  //   record = randomRecord();
-  //   HT_InsertEntry(info, record);
-  // }
+  Record record;
+  srand(12569874);
+  int r;
+  for (int id = 0; id < RECORDS_NUM; ++id) {
+    record = randomRecord();
+    HT_InsertEntry(created_info[0], record);
+  }
 
-  // printf("RUN PrintAllEntries\n");
-  // int id = rand() % RECORDS_NUM;
-  // HT_GetAllEntries(info, &id);
+  int id = rand() % RECORDS_NUM;
+  HT_GetAllEntries(created_info[0], &id);
 
   for(int i=0;i<MAX_CREATED_FILES;i++) free(created_files[i]);
   fclose(logger);

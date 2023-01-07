@@ -7,13 +7,15 @@
 typedef struct {
     int fd;
     int position_in_open_files;
-    int blocks_num;
     int buckets;
     int type; //ht_files are type 1
+    int next_empty_bucket; //Stores the number of the first available bucket in case a block gets max amount of records
 } HT_info;
 
 typedef struct {
   int records_num;
+  int bucket_id;
+  int next_bucket; //Points to next bucket with the same hash id. -1 is block isn't full
 } HT_block_info;
 
 /*Η συνάρτηση HT_CreateFile χρησιμοποιείται για τη δημιουργία
