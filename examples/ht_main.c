@@ -67,7 +67,7 @@ int main() {
   created_info[1] = HT_OpenFile(created_files[1]);
 
   Record record;
-  srand(12569874);
+  srand(time(NULL));
   int r;
   for (int id = 0; id < RECORDS_NUM; ++id) {
     record = randomRecord();
