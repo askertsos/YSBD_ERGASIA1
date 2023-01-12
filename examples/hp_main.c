@@ -43,6 +43,9 @@ char* filenameGenerator(){
 
 int main() {
 
+  int blocksInMemory = 0;
+  int filesInMemory = 0;
+
   //Initialize logger
   log_set_quiet(1);
   FILE * logger = fopen("./Logs/Logs.txt","w");
@@ -81,6 +84,7 @@ int main() {
   }
 
   printf("RUN PrintAllEntries\n");
+
   /*Εκτυπώνει όλα τα records που έχουν εισαχθεί στο αρχείο*/
   for (int id = 0; id < RECORDS_NUM; ++id){
     printf("\nSearching for: %d\n",id);
@@ -90,6 +94,7 @@ int main() {
       printf("Read %d blocks\n",blocks);
     else 
       printf("id #%d not found in file\n",id);
+
   }
 
   // for(int i=0;i<200;i++) free(created_files[i]);

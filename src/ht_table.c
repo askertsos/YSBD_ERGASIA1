@@ -180,7 +180,7 @@ int HT_GetAllEntries(HT_info* ht_info, void *value ){
   log_info("Fetching all entries with id = %d for file %d",id,ht_info->fd);
 
   Record* record;
-  int buckets_read = 0;
+  int buckets_read = 1;
   BF_Block* block;
   BF_Block_Init(&block);
 
@@ -188,30 +188,32 @@ int HT_GetAllEntries(HT_info* ht_info, void *value ){
   BF_GetBlock(fd,hash_id,block);
   void* data = BF_Block_GetData(block);
   HT_block_info* block_info = data;
-  while(block_info->next_bucket != -1){
+
+  int current_bucket = hash_id;
+  int found = 0;
+  while(current_bucket != -1){
     int record_found = 0;
     void* bucket_position = data + sizeof(HT_block_info);
     for(int i = 1; i <= block_info->records_num; i++){
       record = bucket_position;
       if(record->id == id){
-        //If a record with pk = value is found for the first time at examined bucket update the buckets_read variable
-        if(record_found == 0){
-          record_found = 1;
-          buckets_read++;
-        }
+        found = 1;
         printRecord(*record);
       }
+      else if(found == 1) return buckets_read;
       bucket_position += sizeof(Record);
     }
 
-    int next_bucket = block_info->next_bucket;
+    current_bucket = block_info->next_bucket;
+    if(current_bucket == -1) break;
+    buckets_read++;
     CALL_OR_DIE(BF_UnpinBlock(block));
-    BF_GetBlock(fd,next_bucket - 1,block);
+    BF_GetBlock(fd,current_bucket - 1,block);
     data = BF_Block_GetData(block);
     block_info = data;
   }
 
   BF_Block_Destroy(&block);
 
-  return buckets_read;
+  return -1;
 }
