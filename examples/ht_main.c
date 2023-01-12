@@ -68,10 +68,10 @@ int main() {
 
   Record record;
   srand(time(NULL));
-  int r;
   for (int id = 0; id < RECORDS_NUM; ++id) {
     record = randomRecord();
-    HT_InsertEntry(created_info[0], record);
+    int times_to_insert = rand() % 10;
+    for(int j = 0; j < times_to_insert; j++)  HT_InsertEntry(created_info[0], record);
   }
 
   int id = rand() % RECORDS_NUM;

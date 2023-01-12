@@ -222,6 +222,7 @@ int HP_InsertEntry(HP_info* hp_info, Record record){
 }
 
 int HP_GetAllEntries(HP_info* hp_info, int value){
+
   int fd = hp_info->fileDesc;
   BF_Block* block;
   BF_Block_Init(&block);
@@ -230,6 +231,7 @@ int HP_GetAllEntries(HP_info* hp_info, int value){
   int allBlocks;
   BF_GetBlockCounter(fd,&allBlocks);
 
+
   int blocksRead = -1;
 
   for (int i=0; i<allBlocks; i++){
@@ -237,11 +239,13 @@ int HP_GetAllEntries(HP_info* hp_info, int value){
     void* data = BF_Block_GetData(block);
     HP_Block_info* blockInfo = (HP_Block_info*)getBlockInfo(block);
     int records = blockInfo->records;
+
     for (int j=0; j<records; j++){
       Record* record = data + j * sizeof(Record);
       if (record->id == value){
         printRecord(*record);
         blocksRead = i+1;
+
       }
     }
   }
