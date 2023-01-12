@@ -67,7 +67,7 @@ int main() {
   created_info[1] = HT_OpenFile(created_files[1]);
 
   Record record;
-  srand(12569874);
+  srand(time(NULL));
   int r;
   for (int id = 0; id < RECORDS_NUM; ++id) {
     record = randomRecord();
@@ -75,7 +75,8 @@ int main() {
   }
 
   int id = rand() % RECORDS_NUM;
-  HT_GetAllEntries(created_info[0], &id);
+  int buckets_read = HT_GetAllEntries(created_info[0], &id);
+  printf("Buckets read : %d\n",buckets_read);
 
   for(int i=0;i<MAX_CREATED_FILES;i++) free(created_files[i]);
   fclose(logger);
