@@ -50,14 +50,31 @@ void* getBlockInfo(BF_Block* block){
 }
 
 int HP_CreateFile(char *fileName){
-  log_info("Created file %s",fileName);
-  int fd;
-  BF_Block* block;
-  void* data;
+  log_info("Creating file : %s",fileName);
+  CALL_OR_DIE(BF_CreateFile(fileName));
 
-  CALL_BF(BF_CreateFile(fileName));
+  int fd;
+  void* data;
+  BF_Block* block;
   BF_Block_Init(&block);
-  CALL_BF(BF_OpenFile(fileName,&fd));  
+
+<<<<<<< HEAD
+  CALL_OR_DIE(BF_OpenFile(fileName, &fd));
+  CALL_OR_DIE(BF_AllocateBlock(fd, block));
+  data = BF_Block_GetData(block);
+  HP_info* file_info = data;
+  file_info->blocks_num  = 1;
+  file_info->fd = -1;
+  file_info->type = 1;
+  BF_Block_SetDirty(block);
+  CALL_OR_DIE(BF_UnpinBlock(block));
+  CALL_OR_DIE(BF_CloseFile(fd));
+=======
+  log_info("initiated block with address %p",block);
+  
+
+
+
   CALL_BF(BF_AllocateBlock(fd, block));
   data = BF_Block_GetData(block);
 
@@ -76,6 +93,7 @@ int HP_CreateFile(char *fileName){
   CALL_BF(BF_UnpinBlock(block));
   CALL_BF(BF_CloseFile(fd));
   BF_Block_Destroy(&block);
+>>>>>>> 986472730e591e1dddc9c120cc480ff548057f26
     
   return 0;
 }
@@ -86,7 +104,41 @@ HP_info* HP_OpenFile(char *fileName){
   log_info("Opened file %s",fileName);
 
   BF_Block* block;
+<<<<<<< HEAD
   BF_Block_Init(&block);
+  int block_num;
+  BF_GetBlockCounter(fd,&block_num);
+  BF_GetBlock(fd,block_num-1,block);
+
+  void* data;
+  data = BF_Block_GetData(block);
+  hp_info* file_info = data;
+  file_info->fd = fd;
+
+  //If file is not hp return NULL
+  if(file_info->type != 0){
+    free(file_info);
+    CALL_OR_DIE(BF_CloseFile(fd));
+    return NULL;
+  }
+  CALL_OR_DIE(BF_UnpinBlock(block));
+  log_info("File info %s : {fd = %d | blocknum = %d}",fileName,file_info->fd,file_info->blocks_num);
+
+  open_hp_files[open_hp_files_counter++] = file_info;
+
+  return file_info;
+}
+
+
+int HP_CloseFile( HP_info* HP_info ){
+  log_info("Closing file with fd %d",hp_info->fd);
+  for(int i=0;i<open_hp_files_counter;i++){
+    if( open_hp_files[i]->fd == hp_info->fd )
+      BF_CloseFile(hp_info->fd);
+      open_hp_files_counter--;
+  }
+=======
+  BF_OpenFile(fileName,&fd);
   BF_GetBlock(fd,0,block);
 
   void* data = BF_Block_GetData(block);
@@ -121,6 +173,8 @@ int HP_CloseFile(HP_info* hp_info ){
   int fd = hp_info->fileDesc;
   CALL_BF(BF_CloseFile(fd));
   free(hp_info);
+
+>>>>>>> 986472730e591e1dddc9c120cc480ff548057f26
   return 0;
 }
 
