@@ -12,6 +12,7 @@
 // Store number of created databases
 
 
+int openFiles = 0;
 
 #define CALL_BF(call)       \
 {                           \
@@ -68,8 +69,11 @@ int HP_CreateFile(char *fileName){
 }
 
 HP_info* HP_OpenFile(char *fileName){
+  if (openFiles == BF_MAX_OPEN_FILES)
+    return NULL;
   int fd;
-  CALL_BF(BF_OpenFile(fileName, &fd));
+  CALL_BF(BF_OpenFile(fileName, &fd));\
+  openFiles++;
   log_info("Opened file %s",fileName);
 
   BF_Block* block;
@@ -108,7 +112,7 @@ HP_info* HP_OpenFile(char *fileName){
 }
 
 
-int HP_CloseFile(HP_info* hp_info ){
+int HP_CloseFile(HP_info* hp_info){
   printf("in hp_closefile\n");
   int fd = hp_info->fileDesc;
   BF_Block* block;
@@ -116,10 +120,13 @@ int HP_CloseFile(HP_info* hp_info ){
   BF_GetBlock(fd,0,block);
 
   CALL_BF(BF_UnpinBlock(block));
-  CALL_BF(BF_CloseFile(fd));
-  free(hp_info);
 
-  return 0;
+  /*Το return value της HP_CloseFile είναι ακριβώς το ίδιο με αυτό της BF_CloseFile*/
+  int result = BF_CloseFile(fd);
+  if (result)
+    openFiles--;
+  return result;
+
 }
 
 int HP_InsertEntry(HP_info* hp_info, Record record){

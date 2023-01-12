@@ -26,4 +26,4 @@ htv:
 
 clean:
 	@echo "Cleaning up..."
-	rm /build/* hp_databases/* ht_databases/*
+	rm /build/* hp_databases/* ht_databases/* build/*
