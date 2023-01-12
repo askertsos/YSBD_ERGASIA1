@@ -43,9 +43,6 @@ char* filenameGenerator(){
 
 int main() {
 
-  int blocksInMemory = 0;
-  int filesInMemory = 0;
-
   //Initialize logger
   log_set_quiet(1);
   FILE * logger = fopen("./Logs/Logs.txt","w");
@@ -72,16 +69,27 @@ int main() {
   srand(12569874);
   int r;
   printf("Insert Entries\n");
+
+
+  /*Για RECORDS_NUM επαναλήψεις, επιλέγεται ένα τυχαίο record, και επιλέγεται τυχαία ο αριθμός των φορών που θα εισαχθεί στο αρχείο.
+  Γίνεται για να δειχθεί πως δουλεύει σωστά η GetAllEntries, ότι δηλαδή εκτυπώνει όλα τα records με το ζητούμενο id*/
   for (int id = 0; id < RECORDS_NUM; ++id) {
     record = randomRecord();
-    HP_InsertEntry(info, record);
+    int times = rand () % 3 + 1;
+    for (int i=0; i<times; i++)
+      HP_InsertEntry(info, record);
   }
 
   printf("RUN PrintAllEntries\n");
-  for (int i=0; i<100; i++){
-    int id = rand() % RECORDS_NUM;
+  /*Εκτυπώνει όλα τα records που έχουν εισαχθεί στο αρχείο*/
+  for (int id = 0; id < RECORDS_NUM; ++id){
     printf("\nSearching for: %d\n",id);
-    HP_GetAllEntries(info, id);
+    int blocks = HP_GetAllEntries(info, id);
+
+    if (blocks > 0) 
+      printf("Read %d blocks\n",blocks);
+    else 
+      printf("id #%d not found in file\n",id);
   }
 
   // for(int i=0;i<200;i++) free(created_files[i]);
