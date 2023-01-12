@@ -22,7 +22,7 @@ typedef struct {
 
 } HP_Block_info;
 
-#define RECORDS_PER_BLOCK (BF_BUFFER_SIZE - sizeof(HP_Block_info))/sizeof(Record)
+#define RECORDS_PER_BLOCK (BF_BLOCK_SIZE - sizeof(HP_Block_info))/sizeof(Record)
 
 /*Η συνάρτηση HP_CreateFile χρησιμοποιείται για τη δημιουργία και
 κατάλληλη αρχικοποίηση ενός άδειου αρχείου σωρού με όνομα fileName.
