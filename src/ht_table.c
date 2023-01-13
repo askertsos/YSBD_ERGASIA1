@@ -215,5 +215,6 @@ int HT_GetAllEntries(HT_info* ht_info, void *value ){
 
   BF_Block_Destroy(&block);
 
-  return -1;
+  if(found == 0) return -1;
+  return buckets_read;
 }
