@@ -4,6 +4,7 @@
 #include <time.h>
 #include "bf.h"
 #include "ht_table.h"
+#include "sht_table.h"
 #include "Logs.h"
 
 #define RECORDS_NUM 200 // you can change it if you want
@@ -18,11 +19,12 @@
   }
 
 // Base name to create all ht_databases from
-#define DB_ROOT "ht_databases/ht_"
+#define DB_HT_ROOT "ht_databases/ht_"
+#define DB_SHT_ROOT "sht_databases/sht_"
 // Store number of created databases
-int ht_created = 0;
-char* ht_created_files[MAX_CREATED_FILES];
-HT_info* ht_created_info[MAX_CREATED_FILES];
+int sht_created = 0;
+char* sht_created_files[MAX_CREATED_FILES];
+SHT_info* sht_created_info[MAX_CREATED_FILES];
 
 char* generate_name(){
   // Each database will be named using DB_ROOT as a base
@@ -41,7 +43,7 @@ char* generate_name(){
 void create_file(){
   char* fname = generate_name();
   ht_created_files[ht_created-1] = fname;
-  HT_CreateFile(fname,10);
+  SHT_CreateSecondaryIndex(fname,10);
 }
 
 
@@ -52,13 +54,14 @@ int main() {
   FILE * logger = fopen("./Logs/Logs.txt","w");
   log_add_fp(logger,1);
 
-  log_info("Entered ht_main");
+  log_info("Entered sht_main");
 
   BF_Init(LRU);
 
   create_file();
   create_file();
   create_file();
+  return 0;
 
   for(int i=0;i<ht_created;i++) ht_created_info[i] = HT_OpenFile(ht_created_files[i]);
   HT_CloseFile(ht_created_info[1]);
