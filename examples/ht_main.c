@@ -74,9 +74,12 @@ int main() {
     for(int j = 0; j < times_to_insert; j++)  HT_InsertEntry(created_info[0], record);
   }
 
-  int id = rand() % RECORDS_NUM;
-  int buckets_read = HT_GetAllEntries(created_info[0], &id);
-  printf("Buckets read : %d\n",buckets_read);
+  for(int i = 0; i < rand() % 100; i++){
+    int id = rand() % RECORDS_NUM;
+    int buckets_read = HT_GetAllEntries(created_info[0], &id);
+    printf("Buckets read : %d\n",buckets_read);
+    log_info("Buckets read : %d\n",buckets_read);
+  }
 
   for(int i=0;i<MAX_CREATED_FILES;i++) free(created_files[i]);
   fclose(logger);
