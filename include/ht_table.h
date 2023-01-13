@@ -6,7 +6,6 @@
 
 typedef struct {
     int fd;
-    int position_in_open_files;
     int buckets;
     int type; //ht_files are type 1
     int next_empty_bucket; //Stores the number of the first available bucket in case a block gets max amount of records

@@ -4,14 +4,21 @@
 #include <ht_table.h>
 
 
-
+typedef struct {
+    char name[25];
+    int bucket;
+} SHT_entry;
 
 typedef struct {
-    // Να το συμπληρώσετε
+    int fd;
+    int buckets;
+    int next_empty_bucket; //Stores the number of the first available bucket in case a block gets max amount of records
 } SHT_info;
 
 typedef struct {
-    // Να το συμπληρώσετε
+  int records_num;
+  int bucket_id;
+  int next_bucket; //Points to next bucket with the same hash id. -1 is block isn't full
 } SHT_block_info;
 
 /*Η συνάρτηση SHT_CreateSecondaryIndex χρησιμοποιείται για τη δημιουργία

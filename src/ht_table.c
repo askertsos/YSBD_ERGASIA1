@@ -99,7 +99,7 @@ HT_info* HT_OpenFile(char *fileName){
   if (open_ht_files_counter < BF_MAX_OPEN_FILES){
       open_ht_files_counter++;
       BF_Block_Destroy(&block);
-      log_info("Opened file %s with info : {fd = %d | buckets = %d | type = %d | position = %d}",fileName,file_info->fd,file_info->buckets,file_info->type, file_info->position_in_open_files);
+      log_info("Opened file %s with info : {fd = %d | buckets = %d | type = %d }",fileName,file_info->fd,file_info->buckets,file_info->type);
       return file_info;
   }
 
@@ -108,7 +108,7 @@ HT_info* HT_OpenFile(char *fileName){
 }
 
 int HT_CloseFile( HT_info* HT_info ){
-  log_info("Closing file with info: {fd = %d | buckets = %d | type = %d | position = %d}",HT_info->fd,HT_info->buckets,HT_info->type,HT_info->position_in_open_files);
+  log_info("Closing file with info: {fd = %d | buckets = %d | type = %d }",HT_info->fd,HT_info->buckets,HT_info->type);
   if( BF_CloseFile(HT_info->fd) == 0 ){
     open_ht_files_counter--;
     return 0;
