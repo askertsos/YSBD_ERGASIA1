@@ -29,7 +29,7 @@ char* generate_name(){
   // and ht_created as their id and will be of .db type.
 
   ht_created++;
-  char* id = malloc(ht_created/10);
+  char* id = malloc(100);
   sprintf(id,"%d",ht_created);
   char* f_name = malloc(strlen(DB_ROOT) + strlen(id) + 4);
   strcpy(f_name,DB_ROOT);

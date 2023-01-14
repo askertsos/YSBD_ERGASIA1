@@ -66,7 +66,7 @@ int main() {
   log_set_quiet(1);
   FILE * logger = fopen("./Logs/Logs.txt","w");
   log_add_fp(logger,1);
-  log_info("Entered ht_main");
+  log_info("Entered sht_main");
 
   BF_Init(LRU);
 
