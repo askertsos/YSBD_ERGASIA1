@@ -6,6 +6,7 @@
 #include "sht_table.h"
 #include "ht_table.h"
 #include "record.h"
+#include "Logs.h"
 
 #define CALL_OR_DIE(call)     \
   {                           \
@@ -30,7 +31,6 @@ int SHT_CreateSecondaryIndex(char* sfileName,  int buckets, char* fileName){
 
   /*Δημιουργία κενού αρχείου ευρετηρίου ht*/
   CALL_OR_DIE(HT_CreateFile(fileName,buckets));
-
 
   /*Δημιουργία σε BF επίπεδο το δευτερεύον αρχείο*/
   CALL_OR_DIE(BF_CreateFile(sfileName));
