@@ -104,6 +104,7 @@ HT_info* HT_OpenFile(char *fileName){
   }
 
   BF_Block_Destroy(&block);
+  free(file_info);
   return NULL;
 }
 

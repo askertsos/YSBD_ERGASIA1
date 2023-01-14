@@ -26,9 +26,9 @@
 int sht_created = 0;
 int ht_created = 0;
 char* sht_names_created[MAX_CREATED_FILES];
-char*  ht_names_created[MAX_CREATED_FILES];
+char* ht_names_created[MAX_CREATED_FILES];
 
-SHT_info* sht_created_info[MAX_CREATED_FILES];
+SHT_info* sht_open_files[MAX_CREATED_FILES];
 
 char* generate_ht_file(){
   // Each ht database will be named using HT_ROOT as a base
@@ -70,9 +70,18 @@ int main() {
 
   BF_Init(LRU);
 
-  SHT_CreateSecondaryIndex(generate_sht_file(),10,generate_ht_file());
-  SHT_CreateSecondaryIndex(generate_sht_file(),10,generate_ht_file());
-  SHT_CreateSecondaryIndex(generate_sht_file(),10,generate_ht_file());
+  for (int i=0; i<3; i++){
+    SHT_CreateSecondaryIndex(generate_sht_file(),10,generate_ht_file());
+  }
+
+  for (int i=0; i<3; i++){
+    sht_open_files[i] = SHT_OpenSecondaryIndex(sht_names_created[i]);
+  }
+
+  for (int i=0; i<3; i++){
+    SHT_CloseSecondaryIndex(sht_open_files[i]);
+  }
+  
 
   for(int i = 0; i < sht_created; i++) free(sht_names_created[i]);
   for(int i = 0; i < ht_created; i++)  free(ht_names_created[i]);

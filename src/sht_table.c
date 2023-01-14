@@ -17,6 +17,7 @@
     }                         \
   }
 
+int open_sht_files_counter = 0;
 
 int HashFunction(char* name, int buckets){
   int ascii_sum = 0;
@@ -49,6 +50,7 @@ int SHT_CreateSecondaryIndex(char* sfileName,  int buckets, char* fileName){
   file_info->buckets = buckets;
   file_info->fdPrim = -1;
   file_info->fdSec = -1;
+  strcpy(file_info->ht_name,fileName);
   file_info->next_empty_bucket = buckets + 2;
   BF_Block_SetDirty(block);
   CALL_OR_DIE(BF_UnpinBlock(block));
@@ -78,11 +80,60 @@ int SHT_CreateSecondaryIndex(char* sfileName,  int buckets, char* fileName){
 
 SHT_info* SHT_OpenSecondaryIndex(char *indexName){
 
+  if (open_sht_files_counter == (BF_MAX_OPEN_FILES/2)){
+    log_info("Max open files reached");
+    return NULL;    
+  }
+
+  int fdSec;
+  CALL_OR_DIE(BF_OpenFile(indexName, &fdSec));
+  BF_Block* block;
+  BF_Block_Init(&block);
+  BF_GetBlock(fdSec,0,block);
+
+  void* data;
+  data = BF_Block_GetData(block);
+  SHT_info* temp = data;
+
+  SHT_info* info = malloc(sizeof(*info));
+
+  /*Αντιγραφή του info από τη μνήμη*/
+  info->fdSec = temp->fdSec;
+  strcpy(info->ht_name,temp->ht_name);
+  info->buckets = temp->buckets;
+  info->next_empty_bucket = temp->next_empty_bucket;
+  
+  HT_info* infoPrim = HT_OpenFile(info->ht_name);
+  if (infoPrim == NULL){
+    info->fdPrim = -1;
+    SHT_CloseSecondaryIndex(info);
+    free(info);
+
+    BF_Block_Destroy(&block);
+    return NULL;
+  }
+
+  info->fdPrim = infoPrim->fd;
+  free(infoPrim);
+
+  BF_Block_Destroy(&block);
+  log_info("Opened file %s",indexName);  
+  return info;
 }
 
 
 int SHT_CloseSecondaryIndex( SHT_info* SHT_info ){
+  log_info("Closing secondary file with info: {fdSec = %d | buckets = %d }",SHT_info->fdSec,SHT_info->buckets);
+  if( BF_CloseFile(SHT_info->fdSec) == 0 ){
+    open_sht_files_counter--;
+    if (SHT_info->fdPrim != -1){
+      if( HT_CloseFile(SHT_info->fdPrim) == 0 ){
+        return 0;
+      }
+    }
+  }
 
+  return -1;
 }
 
 int SHT_SecondaryInsertEntry(SHT_info* sht_info, Record record, int block_id){

@@ -11,7 +11,7 @@ typedef struct {
 
 typedef struct {
     int fdPrim;
-    char* ht_name;
+    char ht_name[100];
     int fdSec;
     int buckets;
     int next_empty_bucket; //Stores the number of the first available bucket in case a block gets max amount of records
