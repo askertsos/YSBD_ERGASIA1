@@ -110,10 +110,12 @@ HT_info* HT_OpenFile(char *fileName){
 
 int HT_CloseFile( HT_info* HT_info ){
   log_info("Closing file with info: {fd = %d | buckets = %d | type = %d }",HT_info->fd,HT_info->buckets,HT_info->type);
-  if( BF_CloseFile(HT_info->fd) == 0 ){
+  BF_ErrorCode err = BF_CloseFile(HT_info->fd);
+  if( err == BF_OK ){
     open_ht_files_counter--;
     return 0;
   }
+  BF_PrintError(err);
   return -1;
 }
 

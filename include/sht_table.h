@@ -5,23 +5,24 @@
 
 
 typedef struct {
-    char name[25];
+    char name[15];
     int bucket;
 } SHT_entry;
 
 typedef struct {
-    int fdPrim;
-    char ht_name[100];
-    int fdSec;
+    int fileDesc;
     int buckets;
     int next_empty_bucket; //Stores the number of the first available bucket in case a block gets max amount of records
 } SHT_info;
 
 typedef struct {
-  int records_num;
+  int entries;
   int bucket_id;
   int next_bucket; //Points to next bucket with the same hash id. -1 is block isn't full
 } SHT_block_info;
+
+
+#define ENTRIES_PER_BLOCK (BF_BLOCK_SIZE - sizeof(SHT_block_info))/sizeof(SHT_entry)
 
 /*Η συνάρτηση SHT_CreateSecondaryIndex χρησιμοποιείται για τη δημιουργία
 και κατάλληλη αρχικοποίηση ενός αρχείου δευτερεύοντος κατακερματισμού με

@@ -17,6 +17,8 @@ typedef struct {
   int next_bucket; //Points to next bucket with the same hash id. -1 is block isn't full
 } HT_block_info;
 
+#define RECORDS_PER_BLOCK (BF_BLOCK_SIZE - sizeof(HT_block_info))/sizeof(Record)
+
 /*Η συνάρτηση HT_CreateFile χρησιμοποιείται για τη δημιουργία
 και κατάλληλη αρχικοποίηση ενός άδειου αρχείου κατακερματισμού
 με όνομα fileName. Έχει σαν παραμέτρους εισόδου το όνομα του

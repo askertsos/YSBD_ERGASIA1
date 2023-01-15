@@ -2,7 +2,6 @@
 #define HP_FILE_H
 #include <record.h>
 
-char* get_name_of_next_db();
 
 typedef enum fileType{
     HEAP = 0, HASH = 1
