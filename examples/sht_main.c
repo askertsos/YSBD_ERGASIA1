@@ -6,7 +6,7 @@
 #include "ht_table.h"
 #include "sht_table.h"
 
-#define RECORDS_NUM 103 // you can change it if you want
+#define RECORDS_NUM 66 // you can change it if you want
 #define FILE_NAME "data.db"
 #define INDEX_NAME "index.db"
 
@@ -72,8 +72,10 @@ int main() {
     HT_CloseFile(info);
     //
 
-    printf("Statistics:\n\n");
+    printf("HashStatisticsHT:\n\n");
     if (HashStatisticsHT(FILE_NAME) == -1) printf("HashStatisticsHT failed for %s\n",FILE_NAME);
+    
+    printf("HashStatisticsSHT:\n\n");
     if (HashStatisticsSHT(INDEX_NAME) == -1) printf("HashStatisticsSHT failed for %s\n",INDEX_NAME);
     BF_Close();
 }

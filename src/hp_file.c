@@ -1,11 +1,9 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 #include "bf.h"
 #include "hp_file.h"
 #include "record.h"
-#include "Logs.h"
 
 // Base name to create all hp_databases from
 #define DB_ROOT "hp_databases/hp_"
@@ -23,6 +21,7 @@ int openFiles = 0;
   }                         \
 }
 
+//Επιστρέφει δείκτη στο block_info ενός block
 void* getBlockInfo(BF_Block* block){
     char* data = BF_Block_GetData(block);
 
@@ -36,19 +35,16 @@ void* getBlockInfo(BF_Block* block){
 }
 
 int HP_CreateFile(char *fileName){
-  log_info("Creating file : %s",fileName);
-  CALL_BF(BF_CreateFile(fileName));
+  BF_ErrorCode err = BF_CreateFile(fileName); if (err != BF_OK) return -1;
 
   int fd;
   void* data;
   BF_Block* block;
   BF_Block_Init(&block);
-
-  log_info("initiated block with address %p",block);
   
-  CALL_BF(BF_OpenFile(fileName,&fd));
+  err = BF_OpenFile(fileName,&fd); if (err != BF_OK) return -1;
 
-  CALL_BF(BF_AllocateBlock(fd, block));
+  err = BF_AllocateBlock(fd, block); if (err != BF_OK) return -1;
   data = BF_Block_GetData(block);
 
   HP_info* info = data;
@@ -61,8 +57,8 @@ int HP_CreateFile(char *fileName){
   blockInfo->nextBlock = NULL;
 
   BF_Block_SetDirty(block);
-  CALL_BF(BF_UnpinBlock(block));
-  CALL_BF(BF_CloseFile(fd));
+  err = BF_UnpinBlock(block); if (err != BF_OK) return -1;
+  err = BF_CloseFile(fd); if (err != BF_OK) return -1;
   BF_Block_Destroy(&block);
     
   return 0;
@@ -72,25 +68,20 @@ HP_info* HP_OpenFile(char *fileName){
   if (openFiles == BF_MAX_OPEN_FILES)
     return NULL;
   int fd;
-  CALL_BF(BF_OpenFile(fileName, &fd));\
+  BF_ErrorCode err = BF_OpenFile(fileName, &fd); if (err != BF_OK) return NULL;
   openFiles++;
-  log_info("Opened file %s",fileName);
 
   BF_Block* block;
   BF_Block_Init(&block);
-  BF_OpenFile(fileName,&fd);
-  BF_GetBlock(fd,0,block);
+  err = BF_GetBlock(fd,0,block); if (err != BF_OK) return NULL;
 
   void* data = BF_Block_GetData(block);
   HP_info* file_info = data;
-  log_info("File info %s : {fd = %d| newFD = %d | blocknum = %d | type = %d}",fileName,file_info->fileDesc,fd,file_info->blocks,file_info->type);
 
   file_info->fileDesc = fd;
-  log_info("copied fd");
 
-  //If file is not heap-type return NULL
+  /*Αν το αρχείο δεν είναι σωρού, επιστρέφεται NULL*/
   if(file_info->type != HEAP){
-    CALL_BF(BF_CloseFile(fd));
     return NULL;
   }
 
@@ -99,13 +90,10 @@ HP_info* HP_OpenFile(char *fileName){
   new->fileDesc = file_info->fileDesc;
   new->blocks = file_info->blocks;
   new->type = file_info->type;
-  log_info("right before unpinBlock");
-  // CALL_BF(BF_UnpinBlock(block));
+
   BF_Block_SetDirty(block);
-  log_info("File info %s : {fd = %d | blocknum = %d | type = %d}",fileName,file_info->fileDesc,file_info->blocks,file_info->type);
 
   BF_Block_Destroy(&block);
-  // open_ht_files[open_ht_files_counter++] = file_info;
 
   return new;
 
@@ -113,24 +101,21 @@ HP_info* HP_OpenFile(char *fileName){
 
 
 int HP_CloseFile(HP_info* hp_info){
-  printf("in hp_closefile\n");
   int fd = hp_info->fileDesc;
   BF_Block* block;
   BF_Block_Init(&block);
-  BF_GetBlock(fd,0,block);
+  BF_ErrorCode err = BF_GetBlock(fd,0,block); if (err != BF_OK) return -1;
 
-  CALL_BF(BF_UnpinBlock(block));
+  err = BF_UnpinBlock(block); if (err != BF_OK) return -1;
 
-  /*Το return value της HP_CloseFile είναι ακριβώς το ίδιο με αυτό της BF_CloseFile*/
-  int result = BF_CloseFile(fd);
-  if (result)
-    openFiles--;
-  return result;
+  err = BF_CloseFile(fd); if (err != BF_OK) return -1;
+  openFiles--;
+  free(hp_info);
+  return 0;
 
 }
 
 int HP_InsertEntry(HP_info* hp_info, Record record){
-  log_info("in insertEntry");
 
   int fd = hp_info->fileDesc;
   BF_Block* block;
@@ -138,7 +123,7 @@ int HP_InsertEntry(HP_info* hp_info, Record record){
 
   /*Η εγγραφή θα γίνει στο τελευταίο block αν έχει χώρο, αλλιώς θα δημιουργηθεί καινούριο*/
   int lastBlock;
-  CALL_BF(BF_GetBlockCounter(fd,&lastBlock));
+  BF_ErrorCode err = BF_GetBlockCounter(fd,&lastBlock); if (err != BF_OK) return -1;
   int blockID = lastBlock;
   lastBlock -= 1;
 
@@ -148,9 +133,7 @@ int HP_InsertEntry(HP_info* hp_info, Record record){
 
   if (lastBlock == 0){
       /*Δεν έχει δημιουργηθεί block με εγγραφές*/
-      log_info("last block = 0");
-      printf("last block = 0\n");
-      CALL_BF(BF_AllocateBlock(fd,block));
+      err = BF_AllocateBlock(fd,block); if (err != BF_OK) return -1;
 
       currentBlockInfo = getBlockInfo(block);
       void* data = BF_Block_GetData(block);
@@ -158,44 +141,32 @@ int HP_InsertEntry(HP_info* hp_info, Record record){
       currentBlockInfo->records = 1;
       currentBlockInfo->nextBlock = NULL;
 
-      log_info("created new currentBlockInfo");
-      log_info("Data:city inside is %s",((Record*)data)->city);
       /*Το blockID είναι ήδη 1*/
 
   }
   else{
-      log_info("lastBlock =  %d",lastBlock);
-
-      CALL_BF(BF_GetBlock(fd,lastBlock,block));
+      err = BF_GetBlock(fd,lastBlock,block); if (err != BF_OK) return -1;
       currentBlockInfo = getBlockInfo(block);
       int recordTotal = currentBlockInfo->records;
-      log_info("record total is %d",recordTotal);
       recordTotal += 1;
       int fits = recordTotal <= RECORDS_PER_BLOCK;
       char* data = BF_Block_GetData(block);
       if (fits){
-        log_info("fits");
-        
         /*Εισαγωγή αμέσως μετά το τέλος του προηγούμενου record*/
         void* recordPosition = data + currentBlockInfo->records * sizeof(Record);
         memcpy(recordPosition,&record,sizeof(record));
         currentBlockInfo->records += 1;
         blockID = lastBlock;
-        
-        log_info("Copied %s %d",record.record,record.id);
-        log_info("Data:id inside is %d",((Record*)recordPosition)->id);
       }
       else{
-        log_info("doesnt fit");
 
         /*Δημιουργία καινούριου block*/
         BF_Block* newBlock;
         BF_Block_Init(&newBlock);
-        CALL_BF(BF_AllocateBlock(fd,newBlock));
+        err = BF_AllocateBlock(fd,newBlock); if (err != BF_OK) return -1;
 
         /*Ανανέωση του παλιού*/
         currentBlockInfo->nextBlock = newBlock;
-        log_info("updated oldBlockInfo");
 
         /*Εισαγωγή της εγγραφής στο καινούριο block*/
         void* newData = BF_Block_GetData(newBlock);
@@ -205,17 +176,15 @@ int HP_InsertEntry(HP_info* hp_info, Record record){
         newInfo->records = 1;
         newInfo->nextBlock = NULL;
 
-        log_info("Copied %s %d",record.record,record.id);
-        log_info("Data:name inside is %s",((Record*)newData)->name);
         BF_Block_SetDirty(newBlock);
-        CALL_BF(BF_UnpinBlock(newBlock));
+        err = BF_UnpinBlock(newBlock); if (err != BF_OK) return -1;
         BF_Block_Destroy(&newBlock);
         /*Το blockID είναι ήδη = lastBlock+1*/       
       }
 
   }
   BF_Block_SetDirty(block);
-  CALL_BF(BF_UnpinBlock(block));
+  err = BF_UnpinBlock(block); if (err != BF_OK) return -1;
   BF_Block_Destroy(&block);
 
   return blockID;
@@ -229,13 +198,13 @@ int HP_GetAllEntries(HP_info* hp_info, int value){
 
   /*Ο αριθμός των blocks που έχει το αρχείο. Θα εξεταστούν όλα*/
   int allBlocks;
-  BF_GetBlockCounter(fd,&allBlocks);
+  BF_ErrorCode err = BF_GetBlockCounter(fd,&allBlocks); if (err != BF_OK) return -1;
 
 
   int blocksRead = -1;
 
   for (int i=0; i<allBlocks; i++){
-    BF_GetBlock(fd,i,block);
+    err = BF_GetBlock(fd,i,block); if (err != BF_OK) return -1;
     void* data = BF_Block_GetData(block);
     HP_Block_info* blockInfo = (HP_Block_info*)getBlockInfo(block);
     int records = blockInfo->records;
@@ -245,7 +214,6 @@ int HP_GetAllEntries(HP_info* hp_info, int value){
       if (record->id == value){
         printRecord(*record);
         blocksRead = i+1;
-
       }
     }
   }
