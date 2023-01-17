@@ -24,4 +24,4 @@ sht:
 
 clean:
 	@echo "Cleaning up..."
-	rm /build/* hp_databases/* ht_databases/* build/*
+	rm /build/* hp_databases/* ht_databases/* sht_databases/* data.db index.db

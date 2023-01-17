@@ -21,7 +21,7 @@ int openFiles = 0;
 }
 
 /*Επιστρέφει δείκτη στο block_info ενός block*/
-void* getBlockInfo(BF_Block* block){
+HP_Block_info* getBlockInfo(BF_Block* block){
     char* data = BF_Block_GetData(block);
 
     /*Εύρεση του τέλους του data*/
@@ -30,20 +30,20 @@ void* getBlockInfo(BF_Block* block){
     /*Πλέον χωράει ακριβώς μια μεταβλητή τύπου HP_Block_info*/
     start = start - sizeof(HP_Block_info);
 
-    return start;
+    return (HP_Block_info*)start;
 }
 
 int HP_CreateFile(char *fileName){
-  BF_ErrorCode err = BF_CreateFile(fileName); if (err != BF_OK) return -1;
+  BF_ErrorCode err = BF_CreateFile(fileName); if (err != BF_OK) {BF_PrintError(err); return -1;}
 
   int fd;
   void* data;
   BF_Block* block;
   BF_Block_Init(&block);
   
-  err = BF_OpenFile(fileName,&fd); if (err != BF_OK) return -1;
+  err = BF_OpenFile(fileName,&fd); if (err != BF_OK) {BF_PrintError(err); return -1;}
 
-  err = BF_AllocateBlock(fd, block); if (err != BF_OK) return -1;
+  err = BF_AllocateBlock(fd, block); if (err != BF_OK) {BF_PrintError(err); return -1;}
   data = BF_Block_GetData(block);
 
   HP_info* info = data;
@@ -51,13 +51,13 @@ int HP_CreateFile(char *fileName){
   info->blocks = 1;
 
   /*Εισαγωγή στα τελευταία (sizeof(HP_Block_info)) bytes του block*/
-  HP_Block_info* blockInfo = (HP_Block_info*)getBlockInfo(block);
+  HP_Block_info* blockInfo = getBlockInfo(block);
   blockInfo->records = 0;
   blockInfo->nextBlock = NULL;
 
   BF_Block_SetDirty(block);
-  err = BF_UnpinBlock(block); if (err != BF_OK) return -1;
-  err = BF_CloseFile(fd); if (err != BF_OK) return -1;
+  err = BF_UnpinBlock(block); if (err != BF_OK) {BF_PrintError(err); return -1;}
+  err = BF_CloseFile(fd); if (err != BF_OK) {BF_PrintError(err); return -1;}
   BF_Block_Destroy(&block);
     
   return 0;
@@ -67,13 +67,12 @@ HP_info* HP_OpenFile(char *fileName){
   if (openFiles == BF_MAX_OPEN_FILES)
     return NULL;
   int fd;
-  BF_ErrorCode err = BF_OpenFile(fileName, &fd); if (err != BF_OK) return NULL;
+  BF_ErrorCode err = BF_OpenFile(fileName, &fd); if (err != BF_OK) {BF_PrintError(err); return NULL;}
   openFiles++;
 
   BF_Block* block;
   BF_Block_Init(&block);
-  err = BF_GetBlock(fd,0,block); if (err != BF_OK) return NULL;
-
+  err = BF_GetBlock(fd,0,block); if (err != BF_OK) {BF_PrintError(err); return NULL;}
   void* data = BF_Block_GetData(block);
   HP_info* file_info = data;
 
@@ -103,11 +102,11 @@ int HP_CloseFile(HP_info* hp_info){
   int fd = hp_info->fileDesc;
   BF_Block* block;
   BF_Block_Init(&block);
-  BF_ErrorCode err = BF_GetBlock(fd,0,block); if (err != BF_OK) return -1;
+  BF_ErrorCode err = BF_GetBlock(fd,0,block); if (err != BF_OK) {BF_PrintError(err); return -1;}
 
-  err = BF_UnpinBlock(block); if (err != BF_OK) return -1;
+  err = BF_UnpinBlock(block); if (err != BF_OK) {BF_PrintError(err); return -1;}
 
-  err = BF_CloseFile(fd); if (err != BF_OK) return -1;
+  err = BF_CloseFile(fd); if (err != BF_OK) {BF_PrintError(err); return -1;}
   openFiles--;
   free(hp_info);
   return 0;
@@ -122,7 +121,7 @@ int HP_InsertEntry(HP_info* hp_info, Record record){
 
   /*Η εγγραφή θα γίνει στο τελευταίο block αν έχει χώρο, αλλιώς θα δημιουργηθεί καινούριο*/
   int lastBlock;
-  BF_ErrorCode err = BF_GetBlockCounter(fd,&lastBlock); if (err != BF_OK) return -1;
+  BF_ErrorCode err = BF_GetBlockCounter(fd,&lastBlock); if (err != BF_OK) {BF_PrintError(err); return -1;}
   int blockID = lastBlock;
   lastBlock -= 1;
 
@@ -132,7 +131,7 @@ int HP_InsertEntry(HP_info* hp_info, Record record){
 
   if (lastBlock == 0){
       /*Δεν έχει δημιουργηθεί block με εγγραφές*/
-      err = BF_AllocateBlock(fd,block); if (err != BF_OK) return -1;
+      err = BF_AllocateBlock(fd,block); if (err != BF_OK) {BF_PrintError(err); return -1;}
 
       currentBlockInfo = getBlockInfo(block);
       void* data = BF_Block_GetData(block);
@@ -144,7 +143,7 @@ int HP_InsertEntry(HP_info* hp_info, Record record){
 
   }
   else{
-      err = BF_GetBlock(fd,lastBlock,block); if (err != BF_OK) return -1;
+      err = BF_GetBlock(fd,lastBlock,block); if (err != BF_OK) {BF_PrintError(err); return -1;}
       currentBlockInfo = getBlockInfo(block);
       int recordTotal = currentBlockInfo->records;
       recordTotal += 1;
@@ -162,7 +161,7 @@ int HP_InsertEntry(HP_info* hp_info, Record record){
         /*Δημιουργία καινούριου block*/
         BF_Block* newBlock;
         BF_Block_Init(&newBlock);
-        err = BF_AllocateBlock(fd,newBlock); if (err != BF_OK) return -1;
+        err = BF_AllocateBlock(fd,newBlock); if (err != BF_OK) {BF_PrintError(err); return -1;}
 
         /*Ανανέωση του παλιού*/
         currentBlockInfo->nextBlock = newBlock;
@@ -176,14 +175,14 @@ int HP_InsertEntry(HP_info* hp_info, Record record){
         newInfo->nextBlock = NULL;
 
         BF_Block_SetDirty(newBlock);
-        err = BF_UnpinBlock(newBlock); if (err != BF_OK) return -1;
+        err = BF_UnpinBlock(newBlock); if (err != BF_OK) {BF_PrintError(err); return -1;}
         BF_Block_Destroy(&newBlock);
         /*Το blockID είναι ήδη = lastBlock+1*/       
       }
 
   }
   BF_Block_SetDirty(block);
-  err = BF_UnpinBlock(block); if (err != BF_OK) return -1;
+  err = BF_UnpinBlock(block); if (err != BF_OK) {BF_PrintError(err); return -1;}
   BF_Block_Destroy(&block);
 
   return blockID;
@@ -197,15 +196,15 @@ int HP_GetAllEntries(HP_info* hp_info, int value){
 
   /*Ο αριθμός των blocks που έχει το αρχείο. Θα εξεταστούν όλα*/
   int allBlocks;
-  BF_ErrorCode err = BF_GetBlockCounter(fd,&allBlocks); if (err != BF_OK) return -1;
+  BF_ErrorCode err = BF_GetBlockCounter(fd,&allBlocks); if (err != BF_OK) {BF_PrintError(err); return -1;}
 
 
   int blocksRead = -1;
 
   for (int i=0; i<allBlocks; i++){
-    err = BF_GetBlock(fd,i,block); if (err != BF_OK) return -1;
+    err = BF_GetBlock(fd,i,block); if (err != BF_OK) {BF_PrintError(err); return -1;}
     void* data = BF_Block_GetData(block);
-    HP_Block_info* blockInfo = (HP_Block_info*)getBlockInfo(block);
+    HP_Block_info* blockInfo = getBlockInfo(block);
     int records = blockInfo->records;
 
     for (int j=0; j<records; j++){
