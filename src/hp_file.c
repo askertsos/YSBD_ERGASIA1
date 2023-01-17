@@ -7,9 +7,8 @@
 
 // Base name to create all hp_databases from
 #define DB_ROOT "hp_databases/hp_"
+
 // Store number of created databases
-
-
 int openFiles = 0;
 
 #define CALL_BF(call)       \
@@ -21,7 +20,7 @@ int openFiles = 0;
   }                         \
 }
 
-//Επιστρέφει δείκτη στο block_info ενός block
+/*Επιστρέφει δείκτη στο block_info ενός block*/
 void* getBlockInfo(BF_Block* block){
     char* data = BF_Block_GetData(block);
 

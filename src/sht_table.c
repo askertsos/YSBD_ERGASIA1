@@ -168,7 +168,6 @@ int SHT_SecondaryInsertEntry(SHT_info* sht_info, Record record, int block_id){
     BF_GetBlock(sht_info->fileDesc,block_info->next_bucket,block);
     void* data = BF_Block_GetData(block);
     block_info = data;
-
   }
 
   void* pos = nextEntryPosition(data,block_info->entries);

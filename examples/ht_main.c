@@ -4,7 +4,6 @@
 #include <time.h>
 #include "bf.h"
 #include "ht_table.h"
-#include "Logs.h"
 
 #define RECORDS_NUM 200 // you can change it if you want
 #define MAX_CREATED_FILES 200
@@ -47,12 +46,6 @@ void create_file(){
 
 int main() {
 
-  //Initialize logger
-  log_set_quiet(1);
-  FILE * logger = fopen("./Logs/Logs.txt","w");
-  log_add_fp(logger,1);
-
-  log_info("Entered ht_main");
 
   BF_Init(LRU);
 
@@ -78,8 +71,8 @@ int main() {
   for(int i = 0; i < loops; i++){
     int id = rand() % RECORDS_NUM;
     int buckets_read = HT_GetAllEntries(created_info[0], &id);
-    printf("Buckets read : %d\n",buckets_read);
-    log_info("Buckets read : %d\n",buckets_read);
+    if (buckets_read == -1) printf("%d not found\n",id);
+    else printf("Buckets read : %d\n",buckets_read);
   }
 
   for(int i=0;i<ht_created;i++){
@@ -87,6 +80,5 @@ int main() {
     free(created_files[i]);
   }
 
-  fclose(logger);
   BF_Close();
 }
