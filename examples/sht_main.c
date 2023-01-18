@@ -281,7 +281,7 @@ int HashStatisticsSHT(char* filename){
   printf("\n");
   free(extra);
 
-  check = SHT_CloseSecondaryIndex(fileInfo); if (check != BF_OK) return -1;
+  int close = SHT_CloseSecondaryIndex(fileInfo); if (close == -1) return -1;
   return 0;
 
 }
