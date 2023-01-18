@@ -11,15 +11,17 @@ bf:
 	./build/bf_main
 
 ht:
-	@echo " Compile hp_main ..."
+	@echo " Compile ht_main ..."
 	gcc -I ./include/ -L ./lib/ -Wl,-rpath,./lib/ ./examples/ht_main.c ./src/record.c ./src/ht_table.c ./Logs/Logs.c -lbf -o ./build/ht_main -O2
 	@echo "Running ht_main..."
 	./build/ht_main
 
 sht:
-	@echo " Compile hp_main ...";
-	gcc -I ./include/ -L ./lib/ -Wl,-rpath,./lib/ ./examples/sht_main.c ./src/record.c ./src/sht_table.c ./src/ht_table.c -lbf -o ./build/sht_main -O2
+	@echo " Compile sht_main ...";
+	gcc -I ./include/ -L ./lib/ -Wl,-rpath,./lib/ ./examples/sht_main.c ./src/record.c ./src/sht_table.c ./src/ht_table.c ./Logs/Logs.c -lbf -o ./build/sht_main -O2
+	@echo "Running sht_main..."
+	./build/sht_main
 
 clean:
 	@echo "Cleaning up..."
-	rm /build/* hp_databases/* ht_databases/* build/*
+	rm /build/* hp_databases/* ht_databases/* sht_databases/* data.db index.db

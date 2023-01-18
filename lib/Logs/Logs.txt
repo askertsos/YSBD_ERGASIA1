@@ -1,0 +1,2449 @@
+2023-01-15 15:27:50 INFO  ./examples/hp_main.c:54: Entered hp_main
+2023-01-15 15:27:50 INFO  ./examples/hp_main.c:31: Creating name for id : 1
+2023-01-15 15:27:50 INFO  ./examples/hp_main.c:38: Name created succesfuly
+2023-01-15 15:27:50 INFO  ./examples/hp_main.c:59: filename is hp_databases/hp_1.db
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:39: Creating file : hp_databases/hp_1.db
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:47: initiated block with address 0x55f2c9245e60
+2023-01-15 15:27:50 INFO  ./examples/hp_main.c:31: Creating name for id : 2
+2023-01-15 15:27:50 INFO  ./examples/hp_main.c:38: Name created succesfuly
+2023-01-15 15:27:50 INFO  ./examples/hp_main.c:64: filename is hp_databases/hp_2.db
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:39: Creating file : hp_databases/hp_2.db
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:47: initiated block with address 0x55f2c9245e60
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:77: Opened file hp_databases/hp_2.db
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:86: File info hp_databases/hp_2.db : {fd = 0| newFD = 1 | blocknum = 1 | type = 0}
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:89: copied fd
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:102: right before unpinBlock
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:105: File info hp_databases/hp_2.db : {fd = 1 | blocknum = 1 | type = 0}
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:151: last block = 0
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:161: created new currentBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:162: Data:city inside is Miami
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 0
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 0
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 0
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 0
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Yannis
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Dionisis
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 7
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 7
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 7
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 7
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 8
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 8
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 8
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Dionisis
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 8
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 8
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 9
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 9
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 9
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 9
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 10
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 10
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 10
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 10
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 11
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Theofilos
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 11
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 11
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 11
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 11
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 12
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 12
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 13
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 13
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 13
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 13
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 14
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Yannis
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 15
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 15
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 16
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 16
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 16
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 16
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 16
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 16
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 17
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 17
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 17
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Sofia
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  7
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 18
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 18
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  7
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 18
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 18
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  7
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 19
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 19
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  7
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 19
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 19
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  7
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 20
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 20
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  7
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 20
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Konstantina
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  8
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 21
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 21
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  8
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 21
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 21
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  8
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 21
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 21
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  8
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 22
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 22
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  8
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 22
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 22
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  8
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 23
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Giorgos
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  9
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 23
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 23
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  9
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 23
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 23
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  9
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 24
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 24
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  9
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 25
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 25
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  9
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 25
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 25
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  9
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 25
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Dionisis
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  10
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 26
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 26
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  10
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 26
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 26
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  10
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 26
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 26
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  10
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 27
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 27
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  10
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 27
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 27
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  10
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 27
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Yannis
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  11
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 28
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 28
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  11
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 29
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 29
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  11
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 29
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 29
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  11
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 30
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 30
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  11
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 30
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 30
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  11
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 30
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Vagelis
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  12
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 31
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 31
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  12
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 32
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 32
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  12
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 32
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 32
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  12
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 32
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 32
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  12
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 33
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 33
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  12
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 33
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Giorgos
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  13
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 33
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 33
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  13
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 34
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 34
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  13
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 35
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 35
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  13
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 36
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 36
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  13
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 36
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 36
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  13
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 37
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Maria
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  14
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 38
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 38
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  14
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 38
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 38
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  14
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 38
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 38
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  14
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 39
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 39
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  14
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 39
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 39
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  14
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 40
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Dionisis
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  15
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 41
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 41
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  15
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 42
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 42
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  15
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 42
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 42
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  15
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 42
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 42
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  15
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 43
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 43
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  15
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 43
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Marianna
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  16
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 44
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 44
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  16
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 44
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 44
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  16
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 44
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 44
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  16
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 45
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 45
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  16
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 45
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 45
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  16
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 46
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Theofilos
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  17
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 46
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 46
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  17
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 46
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 46
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  17
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 47
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 47
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  17
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 47
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 47
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  17
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 47
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 47
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  17
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:208: Copied record 48
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:209: Data:name inside is Theofilos
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  18
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 49
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 49
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  18
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 49
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 49
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  18
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 50
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 50
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  18
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 50
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 50
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  18
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:185: Copied record 50
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:186: Data:id inside is 50
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:50 INFO  ./src/hp_file.c:167: lastBlock =  18
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 51
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Iosif
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  19
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 52
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 52
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  19
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 52
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 52
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  19
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 53
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 53
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  19
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 53
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 53
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  19
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 53
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 53
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  19
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 54
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Christofos
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  20
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 54
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 54
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  20
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 54
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 54
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  20
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 55
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 55
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  20
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 55
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 55
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  20
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 55
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 55
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  20
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 56
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Konstantina
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  21
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 56
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 56
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  21
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 57
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 57
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  21
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 57
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 57
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  21
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 58
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 58
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  21
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 58
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 58
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  21
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 58
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Dionisis
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  22
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 59
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 59
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  22
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 59
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 59
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  22
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 60
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 60
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  22
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 60
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 60
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  22
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 60
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 60
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  22
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 61
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Maria
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  23
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 61
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 61
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  23
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 62
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 62
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  23
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 62
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 62
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  23
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 63
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 63
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  23
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 63
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 63
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  23
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 64
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Dionisis
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  24
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 64
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 64
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  24
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 65
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 65
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  24
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 66
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 66
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  24
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 66
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 66
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  24
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 67
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 67
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  24
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 67
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Maria
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  25
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 68
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 68
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  25
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 68
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 68
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  25
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 68
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 68
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  25
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 69
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 69
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  25
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 69
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 69
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  25
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 69
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Sofia
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  26
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 70
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 70
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  26
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 70
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 70
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  26
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 71
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 71
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  26
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 72
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 72
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  26
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 72
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 72
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  26
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 72
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Iosif
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  27
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 73
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 73
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  27
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 73
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 73
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  27
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 73
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 73
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  27
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 74
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 74
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  27
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 74
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 74
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  27
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 75
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Maria
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  28
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 75
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 75
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  28
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 75
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 75
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  28
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 76
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 76
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  28
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 77
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 77
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  28
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 78
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 78
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  28
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 79
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Vagelis
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  29
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 79
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 79
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  29
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 80
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 80
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  29
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 80
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 80
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  29
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 80
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 80
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  29
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 81
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 81
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  29
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 81
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Dimitris
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  30
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 82
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 82
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  30
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 83
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 83
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  30
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 84
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 84
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  30
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 84
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 84
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  30
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 85
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 85
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  30
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 85
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Dionisis
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  31
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 85
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 85
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  31
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 86
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 86
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  31
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 87
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 87
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  31
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 87
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 87
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  31
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 87
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 87
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  31
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 88
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Maria
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  32
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 89
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 89
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  32
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 90
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 90
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  32
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 90
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 90
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  32
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 91
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 91
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  32
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 91
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 91
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  32
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 92
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Sofia
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  33
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 92
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 92
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  33
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 93
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 93
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  33
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 93
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 93
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  33
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 93
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 93
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  33
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 94
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 94
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  33
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 94
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Maria
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  34
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 94
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 94
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  34
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 95
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 95
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  34
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 96
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 96
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  34
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 96
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 96
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  34
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 96
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 96
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  34
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 97
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Vagelis
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  35
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 97
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 97
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  35
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 97
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 97
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  35
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 98
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 98
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  35
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 98
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 98
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  35
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 98
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 98
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  35
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 99
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Vagelis
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  36
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 99
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 99
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  36
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 100
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 100
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  36
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 100
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 100
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  36
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 101
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 101
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  36
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 102
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 102
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  36
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 102
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Dionisis
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  37
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 102
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 102
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  37
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 103
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 103
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  37
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 104
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 104
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  37
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 105
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 105
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  37
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 106
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 106
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  37
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 106
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Christofos
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  38
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 106
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 106
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  38
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 107
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 107
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  38
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 107
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 107
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  38
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 108
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 108
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  38
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 109
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 109
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  38
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 110
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Maria
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  39
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 111
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 111
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  39
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 112
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 112
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  39
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 113
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 113
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  39
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 114
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 114
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  39
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 114
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 114
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  39
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 114
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Vagelis
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  40
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 115
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 115
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  40
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 115
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 115
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  40
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 116
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 116
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  40
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 117
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 117
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  40
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 117
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 117
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  40
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 118
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Christofos
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  41
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 119
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 119
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  41
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 120
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 120
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  41
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 120
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 120
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  41
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 120
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 120
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  41
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 121
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 121
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  41
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 121
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Marianna
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  42
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 122
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 122
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  42
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 123
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 123
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  42
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 123
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 123
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  42
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 123
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 123
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  42
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 124
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 124
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  42
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 125
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Vagelis
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  43
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 126
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 126
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  43
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 127
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 127
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  43
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 128
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 128
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  43
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 129
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 129
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  43
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 129
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 129
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  43
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 130
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Dionisis
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  44
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 131
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 131
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  44
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 132
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 132
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  44
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 132
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 132
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  44
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 133
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 133
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  44
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 133
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 133
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  44
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 134
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Vagelis
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  45
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 134
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 134
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  45
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 135
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 135
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  45
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 136
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 136
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  45
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 136
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 136
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  45
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 136
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 136
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  45
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 137
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Marianna
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  46
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 137
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 137
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  46
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 138
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 138
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  46
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 139
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 139
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  46
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 140
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 140
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  46
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 140
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 140
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  46
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 140
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Dimitris
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  47
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 141
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 141
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  47
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 141
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 141
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  47
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 141
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 141
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  47
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 142
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 142
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  47
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 142
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 142
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  47
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 143
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Giorgos
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  48
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 143
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 143
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  48
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 143
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 143
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  48
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 144
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 144
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  48
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 144
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 144
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  48
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 145
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 145
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  48
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 145
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Maria
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  49
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 146
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 146
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  49
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 146
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 146
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  49
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 146
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 146
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  49
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 147
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 147
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  49
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 147
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 147
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  49
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 147
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Sofia
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  50
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 148
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 148
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  50
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 148
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 148
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  50
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 148
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 148
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  50
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 149
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 149
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  50
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 150
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 150
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  50
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 150
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Theofilos
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  51
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 151
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 151
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  51
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 151
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 151
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  51
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 152
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 152
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  51
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 152
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 152
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  51
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 152
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 152
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  51
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 153
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Iosif
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  52
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 153
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 153
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  52
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 153
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 153
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  52
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 154
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 154
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  52
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 154
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 154
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  52
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 155
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 155
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  52
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 155
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Maria
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  53
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 156
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 156
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  53
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 156
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 156
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  53
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 156
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 156
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  53
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 157
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 157
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  53
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 158
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 158
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  53
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 158
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Dionisis
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  54
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 158
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 158
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  54
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 159
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 159
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  54
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 160
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 160
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  54
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 160
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 160
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  54
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 161
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 161
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  54
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 161
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Theofilos
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  55
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 161
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 161
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  55
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 162
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 162
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  55
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 162
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 162
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  55
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 162
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 162
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  55
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 163
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 163
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  55
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 163
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Dionisis
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  56
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 163
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 163
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  56
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 164
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 164
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  56
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 164
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 164
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  56
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 164
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 164
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  56
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 165
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 165
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  56
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 166
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Giorgos
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  57
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 166
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 166
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  57
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 167
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 167
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  57
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 167
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 167
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  57
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 168
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 168
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  57
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 168
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 168
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  57
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 169
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Giorgos
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  58
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 169
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 169
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  58
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 170
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 170
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  58
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 171
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 171
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  58
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 171
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 171
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  58
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 172
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 172
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  58
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 172
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Christofos
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  59
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 173
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 173
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  59
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 174
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 174
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  59
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 175
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 175
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  59
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 175
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 175
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  59
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 176
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 176
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  59
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 176
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Dimitris
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  60
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 177
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 177
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  60
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 177
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 177
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  60
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 177
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 177
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  60
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 178
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 178
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  60
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 178
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 178
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  60
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 179
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Konstantina
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  61
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 179
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 179
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  61
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 180
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 180
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  61
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 180
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 180
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  61
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 181
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 181
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  61
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 181
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 181
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  61
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 182
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Vagelis
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  62
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 182
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 182
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  62
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 182
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 182
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  62
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 183
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 183
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  62
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 183
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 183
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  62
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 184
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 184
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  62
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 185
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Dimitris
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  63
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 186
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 186
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  63
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 187
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 187
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  63
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 188
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 188
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  63
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 189
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 189
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  63
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 190
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 190
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  63
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 191
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Dimitris
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  64
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 192
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 192
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  64
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 193
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 193
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  64
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 194
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 194
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  64
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 194
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 194
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  64
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 194
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 194
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  64
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 195
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Christofos
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  65
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 195
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 195
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  65
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 195
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 195
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  65
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 196
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 196
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  65
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 196
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 196
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  65
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 5
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 196
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 196
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  65
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 6
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:189: doesnt fit
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:198: updated oldBlockInfo
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:208: Copied record 197
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:209: Data:name inside is Theofilos
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  66
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 1
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 198
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 198
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  66
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 2
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 198
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 198
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  66
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 3
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 199
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 199
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:133: in insertEntry
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:167: lastBlock =  66
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:172: record total is 4
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:177: fits
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:185: Copied record 199
+2023-01-15 15:27:51 INFO  ./src/hp_file.c:186: Data:id inside is 199

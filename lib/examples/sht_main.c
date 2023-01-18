@@ -6,7 +6,7 @@
 #include "ht_table.h"
 #include "sht_table.h"
 
-#define RECORDS_NUM 75 // you can change it if you want
+#define RECORDS_NUM 103 // you can change it if you want
 #define FILE_NAME "data.db"
 #define INDEX_NAME "index.db"
 
@@ -24,7 +24,7 @@ int HashStatisticsSHT(char* filename);
 
 
 int main() {
-    srand(12569874); /*Αρχικό seed, σε περίπτωση που χρειάζεται για έλεγχο*/
+    srand(12569874);
     srand(time(NULL));
     BF_Init(LRU);
     // Αρχικοποιήσεις
@@ -72,10 +72,8 @@ int main() {
     HT_CloseFile(info);
     //
 
-    printf("\nHashStatisticsHT:\n");
-    if (HashStatisticsHT(FILE_NAME) == -1) printf("HashStatisticsHT failed for %s\n\n",FILE_NAME);
-
-    printf("HashStatisticsSHT:\n");
+    printf("Statistics:\n\n");
+    if (HashStatisticsHT(FILE_NAME) == -1) printf("HashStatisticsHT failed for %s\n",FILE_NAME);
     if (HashStatisticsSHT(INDEX_NAME) == -1) printf("HashStatisticsSHT failed for %s\n",INDEX_NAME);
     BF_Close();
 }
@@ -92,35 +90,31 @@ int HashStatisticsHT(char* filename){
   int check;
   void* data;
   HT_block_info* block_info;
-  BF_ErrorCode err;
 
   //1
-  printf("\n1.\n");
+  printf("1.\n");
   int blockTotal = 1; /*Το block 0*/
-  for (int i=1; i<=buckets; i++){
-    err = BF_GetBlock(fd,i,block); if (err != BF_OK) {BF_PrintError(err); return -1;}
+  for (int i=2; i<=buckets; i++){
+    check = BF_GetBlock(fd,i,block); if (check != BF_OK) return -1;
     data = BF_Block_GetData(block);
     block_info = data;
     blockTotal++;
-    err = BF_UnpinBlock(block); if (err != BF_OK) return -1;
     while (block_info->next_bucket != -1){
-      CALL_OR_DIE(BF_GetBlock(fd,block_info->next_bucket,block));
-      err = BF_GetBlock(fd,block_info->next_bucket,block); if (err != BF_OK) {BF_PrintError(err); return -1;}
+      check = BF_GetBlock(fd,block_info->next_bucket,block); if (check != BF_OK) return -1;
       data = BF_Block_GetData(block);
       block_info = data;
       blockTotal++;
-      err = BF_UnpinBlock(block); if (check != BF_OK) return -1;
     }
   }
-  printf("File %s has %d blocks total\n",filename,blockTotal);
+  printf("\tFile %s has %d blocks total\n\n",filename,blockTotal);
 
   //2
-  printf("\n2.\n");
+  printf("2.\n");
   int recordTotal = 0;
   int max = 0;
    /*Στη χειρότερη περίπτωση όλες οι εγγραφές είναι στο ίδιο bucket, το οποίο περιέχει όλα τα blocks, και είναι όλα γεμάτα. Και πάλι, αυτός ο αριθμός είναι μεγαλύτερος λόγω του block 0*/
   int min = RECORDS_PER_BLOCK * blockTotal;
-  for (int i=1; i<=buckets; i++){
+  for (int i=2; i<=buckets; i++){
     check = BF_GetBlock(fd,i,block); if (check != BF_OK) return -1;
     data = BF_Block_GetData(block);
     HT_block_info* block_info = data;
@@ -130,7 +124,6 @@ int HashStatisticsHT(char* filename){
       data = BF_Block_GetData(block);
       block_info = data;
       records_in_bucket += block_info->records_num;
-      err = BF_UnpinBlock(block); if (err != BF_OK) return -1;
     }
     if (records_in_bucket < min) min = records_in_bucket;
     /*Όταν i=1, ισχύουν και τα δύο*/
@@ -141,25 +134,23 @@ int HashStatisticsHT(char* filename){
   printf("Fewest records in a bucket: %d\nMost records in a bucket: %d\nAverage records per bucket: %lf\n",min,max,averageRec);
 
   //3
-  printf("\n3.\n");
+  printf("3.\n");
   double averageBlocks = (double)((double)blockTotal/(double)buckets);
-  printf("The average bucket has %lf blocks\n",averageBlocks);
+  printf("\tThe average bucket has %lf blocks\n\n",averageBlocks);
 
   //4
-  printf("\n4.\n");
+  printf("4.\n");
   int* extra = malloc(buckets * sizeof(int));
   for (int i=0; i<buckets; i++) extra[i] = 0;
-  for (int i=1; i<=buckets; i++){
+  for (int i=2; i<=buckets; i++){
     check = BF_GetBlock(fd,i,block); if (check != BF_OK) return -1;
     void* data = BF_Block_GetData(block);
     HT_block_info* block_info = data;
-    err = BF_UnpinBlock(block); if (err != BF_OK) return -1;
     while (block_info->next_bucket != -1){
       extra[i-1] = extra[i-1] + 1;
       check = BF_GetBlock(fd,block_info->next_bucket,block); if (check != BF_OK) return -1;
       data = BF_Block_GetData(block);
       block_info = data;
-      err = BF_UnpinBlock(block); if (err != BF_OK) return -1;
     }
   }
   int overflown = 0;
@@ -168,14 +159,13 @@ int HashStatisticsHT(char* filename){
       overflown++;
   }
   if (overflown>0){
-    printf("These %d buckets have been overflown:\n",overflown);
+    printf("\tThese %d buckets have been overflown:\n",overflown);
     for (int i=0; i<buckets; i++){
       if (extra[i] > 0)
-        printf("%d: %d extra bucket(s)\n",(i+1),extra[i]);
+        printf("%d: %d extra bucket\n",(i+1),extra[i]);
     }
   }
   else printf("No bucket was overflown\n");
-  printf("\n");
   free(extra);
 
   check = HT_CloseFile(fileInfo); if (check != BF_OK) return -1;
@@ -198,15 +188,16 @@ int HashStatisticsSHT(char* filename){
   SHT_block_info* block_info;
 
   //1
-  printf("\n1.\n");
+  printf("1.\n");
   int blockTotal = 1; /*Το block 0*/
-  for (int i=1; i<=buckets; i++){
+  for (int i=2; i<=buckets; i++){
     check = BF_GetBlock(fd,i,block); if (check != BF_OK) return -1;
     data = BF_Block_GetData(block);
     block_info = data;
     blockTotal++;
     check = BF_UnpinBlock(block); if (check != BF_OK) return -1;
     while (block_info->next_bucket != -1){
+      printf("next bucket is %d\n",block_info->next_bucket);
       check = BF_GetBlock(fd,block_info->next_bucket,block); if (check != BF_OK) return -1;
       data = BF_Block_GetData(block);
       block_info = data;
@@ -214,10 +205,10 @@ int HashStatisticsSHT(char* filename){
       check = BF_UnpinBlock(block); if (check != BF_OK) return -1;
     }
   }
-  printf("File %s has %d blocks total\n",filename,blockTotal);
+  printf("\tFile %s has %d blocks total\n\n",filename,blockTotal);
 
   //2
-  printf("\n2.\n");
+  printf("2.\n");
   int entryTotal = 0;
   int max = 0;
    /*Στη χειρότερη περίπτωση όλες οι εγγραφές είναι στο ίδιο bucket, το οποίο περιέχει όλα τα blocks, και είναι όλα γεμάτα. Και πάλι, αυτός ο αριθμός είναι μεγαλύτερος λόγω του block 0*/
@@ -244,12 +235,12 @@ int HashStatisticsSHT(char* filename){
   printf("Fewest entries in a bucket: %d\nMost entries in a bucket: %d\nAverage entries per bucket: %lf\n",min,max,averageEnt);
 
   //3
-  printf("\n3.\n");
+  printf("3.\n");
   double averageBlocks = (double)((double)blockTotal/(double)buckets);
-  printf("The average bucket has %lf blocks\n",averageBlocks);
+  printf("\tThe average bucket has %lf blocks\n\n",averageBlocks);
 
   //4
-  printf("\n4.\n");
+  printf("4.\n");
   int* extra = malloc(buckets * sizeof(int));
   for (int i=0; i<buckets; i++) extra[i] = 0;
   for (int i=1; i<=buckets; i++){
@@ -271,17 +262,16 @@ int HashStatisticsSHT(char* filename){
       overflown++;
   }
   if (overflown > 0){
-    printf("These %d buckets have been overflown:\n",overflown);
+    printf("\tThese %d buckets have been overflown:\n",overflown);
     for (int i=0; i<buckets; i++){
       if (extra[i] > 0)
-        printf("%d: %d extra bucket(s)\n",(i+1),extra[i]);
+        printf("%d: %d extra bucket\n",(i+1),extra[i]);
     }
   }
   else printf("No bucket was overflown\n");
-  printf("\n");
   free(extra);
 
-  int close = SHT_CloseSecondaryIndex(fileInfo); if (close == -1) return -1;
+  check = SHT_CloseSecondaryIndex(fileInfo); if (check != BF_OK) return -1;
   return 0;
 
 }
