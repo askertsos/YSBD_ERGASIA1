@@ -6,7 +6,7 @@
 #include "ht_table.h"
 #include "sht_table.h"
 
-#define RECORDS_NUM 60 // you can change it if you want
+#define RECORDS_NUM 75 // you can change it if you want
 #define FILE_NAME "data.db"
 #define INDEX_NAME "index.db"
 
@@ -274,7 +274,7 @@ int HashStatisticsSHT(char* filename){
     printf("These %d buckets have been overflown:\n",overflown);
     for (int i=0; i<buckets; i++){
       if (extra[i] > 0)
-        printf("%d: %d extra bucket\n",(i+1),extra[i]);
+        printf("%d: %d extra bucket(s)\n",(i+1),extra[i]);
     }
   }
   else printf("No bucket was overflown\n");

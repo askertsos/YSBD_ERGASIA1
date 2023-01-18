@@ -142,10 +142,18 @@ int SHT_SecondaryInsertEntry(SHT_info* sht_info, Record record, int block_id){
   void* data = BF_Block_GetData(block);
   SHT_block_info* block_info = data;
 
-  if(block_info->entries == ENTRIES_PER_BLOCK && block_info->next_bucket == -1){
-    int new_bucket = sht_info->next_empty_bucket; //Get the first available empty bucket and allocate it
-    block_info->next_bucket = new_bucket; //Update previous bucket to point to new bucket
-    sht_info->next_empty_bucket += 1; //Update next_empty_bucket variable for next allocation
+  /*Όσο είναι γεμάτο το block, πάμε στο επόμενο που αντιστοιχεί στο ίδιο hash_id*/
+  while (block_info->next_bucket != -1){
+    BF_GetBlock(sht_info->fileDesc,block_info->next_bucket,block);
+    void* data = BF_Block_GetData(block);
+    block_info = data;
+  }
+
+  /*Το τελευταίο μπλοκ είναι γεμάτο, χρειάζεται να δημιουργήσουμε κι άλλο*/
+  if(block_info->entries == ENTRIES_PER_BLOCK){
+    int new_bucket = sht_info->next_empty_bucket; 
+    block_info->next_bucket = new_bucket; 
+    sht_info->next_empty_bucket += 1; 
 
     BF_Block* new_block;
     BF_Block_Init(&new_block);
@@ -162,13 +170,7 @@ int SHT_SecondaryInsertEntry(SHT_info* sht_info, Record record, int block_id){
     block_info = new_block_info;
   }  
 
-  SHT_block_info* temp = block_info;
-  /*Όσο είναι γεμάτο το block, πάμε στο επόμενο που αντιστοιχεί στο ίδιο hash_id*/
-  while (block_info->next_bucket != -1){
-    BF_GetBlock(sht_info->fileDesc,block_info->next_bucket,block);
-    void* data = BF_Block_GetData(block);
-    block_info = data;
-  }
+
 
   void* pos = nextEntryPosition(data,block_info->entries);
   memcpy(pos,&newEntry,sizeof(SHT_entry));
